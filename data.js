@@ -832,6 +832,53 @@
                 Essa lente funciona especialmente bem se for utilizada em conjunção com a <lense-ref>19</lense-ref>.\
             '
         });
+        
+        addLense({
+            number: 43,
+            title: "A Lente da Competição",
+            smallTitle: "Competição",
+            page: { br: 186 },
+            set: game,
+            illustrator: "Elizabeth Barndollar",
+            description: '\
+                <p>\
+                    Determinar quem é mais hábil em alguma coisa é uma compulsão humana básica. Jogos de competição podem satisfazer essa compulsão. Use essa lente para\
+                    se sertificar de que seu jogo competitivo faz as pessoas quererem vencer.<br />\
+                    Faç a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Meu jogo fornece uma medida justa das habilidades do jogador?</li>\
+                    <li>As pessoas querem vencer meu jogo? Por quê?</li>\
+                    <li>Vencer esse jogo é algo de que as pessoas podem se orgulhar? Por quê?</li>\
+                    <li>Principiantes podem competir de uma maneira significativa em meu jogo?</li>\
+                    <li>Jogadores experientes podem competir de maneira significativa em meu jogo?</li>\
+                    <li>De maneira geral, jogadores experientes podem ter certeza de que derrotarão os principiantes?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 44,
+            title: "A Lente da Cooperação",
+            smallTitle: "Cooperação",
+            page: { br: 187 },
+            set: game,
+            illustrator: "Sam Yip",
+            description: '\
+                <p>\
+                    Colaborar e ter sucesso como um time é um prazer especial que pode criar laços sociais duradouros. Use essa lente para estudar aspectos cooperativos\
+                    do seu jogo. Faça estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>A cooperação exige comunicação. Meus jogadores têm oportunidade suficiente de se comunicar? Como a comunicação poderia ser aprimorada?</li>\
+                    <li>Meus jogadores já são amigos, ou são estranhos? Se forem estranhos, posso ajudá-los a quebrar o gelo?</li>\
+                    <li>Há sinergia (2 + 2 = 5) ou antergia (2 + 2 = 3) quando os jogadores trabalham em conjunto? Por quê?</li>\
+                    <li>Todos os jogadores desempenham o mesmo papel, ou têm funções especiais?</li>\
+                    <li>A cooperação é significativamente aprimorada quando não há como uma pessoa realizar uma tarefa sozinha. Meu jogo tem tarefas como essa?</li>\
+                    <li>Tarefas que forçam a comunicação inspiram a cooperação. Quaisquer das minhas tarefas forçam a comunicação?</li>\
+                </ul>\
+            '
+        });
 
         
         // addLense({
