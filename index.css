@@ -1,0 +1,158 @@
+/* LAYOUT */
+.circle-button {
+    background-color: white;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    margin: 0 10px;
+    padding: 6px;
+    border: 1px solid #e9e9e9;
+    cursor: pointer;
+}
+
+    .circle-button:not(.active):not(:active):hover {
+        background-color: #fff8f1;
+        border-color: #dfb998;
+    }
+
+    .circle-button.active, .circle-button:active {
+        background-color: #ffdbbb !important;
+        border-color: #c5620a !important;
+    }
+
+    .circle-button img {
+        width: 34px;
+        height: 34px;
+    }
+    
+    .circle-button.small {
+        width: 32px;
+        height: 32px;
+        padding: 4px;
+        border-radius: 16px;
+    }
+
+        .circle-button.small img {
+            width: 22px;
+            height: 22px;
+        }
+
+    
+    .circle-button.big {
+        width: 68px;
+        height: 68px;
+        padding: 12px;
+        border-radius: 34px;
+    }
+
+        .circle-button.big img {
+            width: 42px;
+            height: 42px;
+        }
+
+    .circle-button.contrast {
+        border-color: black;
+    }
+    
+        .circle-button.contrast:not(.active):not(:active):hover {
+            background-color: #ffddba;
+            border-color: black;
+        }
+
+        .circle-button.contrast.active, .circle-button.contrast:active {
+            background-color: #ffb370 !important;
+            border-color: black !important;
+        }
+
+/* HEADER */
+.main-menu, .sets-menu {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+    .main-menu li, .sets-menu li {
+        float: left;
+        cursor: pointer;
+    }
+
+.sets-menu li {
+    text-transform: lowercase;
+    font-size: 0.75em;
+    padding: 2px;
+    margin: 2px 6px;
+}
+
+    .sets-menu li.active {
+        color: #db7012;
+        font-weight: bold;
+    }
+
+/* CONTENT */
+.lense {
+    background-color: #fff7ef;
+    cursor: pointer;
+}
+
+    .lense:hover  {
+        border-color: #8b4d0d;
+        background-color: #ffe8d0;
+    }
+
+.lense-number {
+    font-size: 1.7em;
+    color: #db7012;
+    font-weight: 900;
+    line-height: 0;
+}
+
+.lense-title {
+    font-weight: 600;
+    margin-left: 13px;
+    top: 2px;
+}
+
+.lense-image {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 250px;
+}
+
+.lense-image img {
+    border: 1px solid #f9e0ce;
+}
+
+.lense-image-illustrator {
+    display: inline-block;
+    font-size: 0.7em;
+    margin: 2px;
+    font-style: italic;
+}
+
+.lense-modal {
+    max-width: 700px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+.lense-description {
+    font-size: 0.9em;
+}
+
+.lense-description .questions {
+    list-style-type: square;
+    font-size: 0.95em;
+    background-color: #f6fbff;
+    padding: 7px 7px 7px 30px;
+}
+
+.lense-ref {
+    color: #242493;
+}
+
+.lense-page {
+    font-size: 0.75em;
+    font-style: italic;
+}

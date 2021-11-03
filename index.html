@@ -1,0 +1,102 @@
+<html lang="pt-br" ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Arte de Game Design - Lentes</title>
+        
+        <link href="lib/bootstrap.min.css" rel="stylesheet" />
+        <link href="index.css" rel="stylesheet" />
+    </head>
+    <body ng-controller="MainController" ng-init="init()">
+        <!-- HEADER -->
+        <h5 class="mt-4 mb-4 text-center">Arte de Game Design</h5>
+
+        <div class="text-center mb-2">
+            <ul class="main-menu">
+                <li ng-repeat="menu in menus" class="circle-button" ng-class="{ active: isMenuActive(menu) }" ng-click="selectMenu(menu)" title="{{menu.title}}">
+                    <img ng-src="images/icons/{{menu.name}}.png" />
+                </li>
+            </ul>
+        </div>
+     
+        <div class="text-center">
+            <ul class="sets-menu">
+                <li ng-repeat="set in sets" ng-class="{ active: set.active }" ng-click="selectSet(set)" ng-bind="set.title"></li>
+            </ul>
+        </div>
+
+        <!-- CARDS -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in lenses">
+                    <div class="card lense m-3" ng-click="visualizeLense(lense)">
+                        <div class="card-body">
+                            <div class="card-title text-center">
+                                <span class="lense-number" ng-bind="lense.number"></span>
+                                <span class="lense-title" ng-bind="lense.smallTitle"></span>
+                            </div>
+
+                            <div class="lense-image mt-4 mb-3">
+                                <img class="lense-image" ng-src="images/lenses/lense-{{lense.number}}.png" />
+                                <div class="text-right">
+                                    <span class="lense-image-illustrator">
+                                        Illustrated by: {{lense.illustrator}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1" ng-show="isMenuActive('random') || isMenuActive('divination')">
+                    <a class="circle-button small contrast m-3" ng-click="updateLensesList()">
+                        <img src="images/icons/update.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <modal class="lense-modal" is-open="isOpened" ng-controller="LenseModalController">
+            <modal-body>
+                <a class="circle-button small float-right" ng-class="{ active: lense.favorite }" ng-click="toggleFavorite(lense)">
+                    <img src="images/icons/favorites.png" title="Favoritar" />
+                </a>
+
+                <div class="text-center">
+                    <span class="lense-number" ng-bind="lense.number"></span>
+                    <span class="lense-title" ng-bind="lense.title"></span>
+                </div>
+
+                <div class="lense-image mt-4 mb-3">
+                    <img class="lense-image" ng-src="images/lenses/lense-{{lense.number}}.png" />
+                    <div class="text-right">
+                        <span class="lense-image-illustrator">
+                            Illustrated by: {{lense.illustrator}}
+                        </span>
+                    </div>
+                </div>
+
+                <hr class="hr" />
+                <div class="lense-description" bind-html-compile="lense.description"></div>
+                <div class="lense-page text-right mt-4">
+                    <div ng-show="lense.page.br">Arte de Game Design: o livro original <span class="ml-2">p {{lense.page.br}}</span></div>
+                </div>
+            </modal-body>
+        </modal>
+    </body>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/linq.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-sanitize.min.js"></script>
+    
+    <script src="lib/gj/helpers.js"></script>
+    <script src="lib/gj/app.js"></script>
+    <script src="lib/gj/modal.js"></script>
+    <script src="lib/gj/bind-html-compile.js"></script>
+    
+    <script src="app.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</html>
