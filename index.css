@@ -141,12 +141,25 @@
     font-size: 0.9em;
 }
 
-.lense-description .questions {
-    list-style-type: square;
-    font-size: 0.95em;
-    background-color: #f6fbff;
-    padding: 7px 7px 7px 30px;
-}
+    .lense-description .questions {
+        list-style: none;
+        font-size: 0.89em;
+        background-color: #f6fbff;
+        padding: 7px 7px 7px 30px;
+    }
+
+        .lense-description .questions li {
+            margin: 7px 0;
+        }
+
+            .lense-description .questions li::before {
+                content: "■";
+                color: #284fa7;
+                font-size: 0.8em;
+                position: absolute;
+                margin-top: 3px;
+                margin-left: -19px;
+            }
 
 .lense-ref {
     color: #242493;
