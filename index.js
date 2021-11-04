@@ -4,18 +4,16 @@
     app.controller("MainController", ["$scope", "data", "storage", function (scope, data, storage) {
         
         function loadSelectedMenuFromStorage(){
-            var name = storage.get("selectedMenu");
             var menu = scope.menus.singleOrDefault(function (m) {
-                return m.name == name;
+                return m.name == storage.selectedMenu;
             });
 
             if (menu)
                 scope.selectedMenu = menu;
         }
         function loadActiveSetsFromStorage() {
-            var ids = storage.get("activeSets") || [];
             var sets = data.sets.where(function (s) {
-                return ids.contains(s.id);
+                return storage.activeSets.contains(s.id);
             });
 
             sets.forEach(function (s) {
@@ -23,9 +21,8 @@
             });
         }
         function loadFavoritesFromStorage() {
-            var ids = storage.get("favorites") || [];
             var lenses = data.lenses.where(function (l) {
-                return ids.contains(l.id);
+                return storage.favorites.contains(l.id);
             });
             
             lenses.forEach(function (l) {
@@ -45,9 +42,12 @@
         scope.lenses = data.lenses;
 
         scope.init = function () {
+            storage.load();
+
             loadSelectedMenuFromStorage();
             loadActiveSetsFromStorage();
             loadFavoritesFromStorage();
+            
             scope.updateLensesList();
         };
         scope.selectMenu = function (menu) {
@@ -55,8 +55,10 @@
                 return;
 
             scope.selectedMenu = menu;
+            
+            storage.selectedMenu = menu.name;
+            storage.save();
 
-            storage.set("selectedMenu", menu.name);
             scope.updateLensesList();
         };
         scope.isMenuActive = function (menu) {
@@ -70,7 +72,10 @@
 
             var activeSetsIds = data.sets.where("$.active").select("$.id");
 
-            storage.set("activeSets", activeSetsIds);
+            storage.activeSets.clear();
+            storage.activeSets.pushRange(activeSetsIds);
+            storage.save();            
+
             scope.updateLensesList();
         };
 
@@ -119,7 +124,9 @@
 
             var favoritesIds = data.lenses.where("$.favorite").select("$.id");
 
-            storage.set("favorites", favoritesIds);
+            storage.favorites.clear();
+            storage.favorites.pushRange(favoritesIds);
+            storage.save();
         }
     }]);
 
@@ -157,14 +164,29 @@
     }]);
 
     app.service("storage", function () {
+        var key = "art_of_game_design_lenses: user_data";
         
-        this.get = function (key) {
+        this.selectedMenu = null;
+        this.activeSets = [];
+        this.favorites = [];
+
+        this.load = function () {
             var json = localStorage.getItem(key);
             var value = JSON.parse(json);
 
-            return value;
+            if (value) {
+                this.selectedMenu = value.selectedMenu;
+                this.activeSets = value.activeSets;
+                this.favorites = value.favorites;
+            }
         };
-        this.set = function (key, value) {
+        this.save = function () {
+            var value = {
+                selectedMenu: this.selectedMenu,
+                activeSets: this.activeSets,
+                favorites: this.favorites
+            };
+
             var json = JSON.stringify(value);
 
             localStorage.setItem(key, json);
