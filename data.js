@@ -492,6 +492,30 @@
         });
         
         addLense({
+            number: 27,
+            title: "A Lente do Tempo",
+            smallTitle: "Tempo",
+            page: { br: 189 },
+            set: game,
+            illustrator: "Sam Yip",
+            description: '\
+                <p>\
+                    Costuma-se dizer que "tempo é tudo". Nosso objetivo como designers é criar experiências, e experiências são facilmente corrompidas quando são muito\
+                    breves ou muito longas. Faça estas perguntas para que a sua tenha a duração correta:\
+                </p>\
+                <ul class="questions">\
+                    <li>O que determina a duração das minhas atividades em termos de jogabilidade?</li>\
+                    <li>Meus jogadores se sentem frustrados porque o jogo termina muito cedo? Como posso mudar isso?</li>\
+                    <li>Meus jogadores ficam entediados porque o jogo se estende por muito tempo? Como posso mudar isso?</li>\
+                    <li>Especificar um limite de tempo pode tornar o jogo mais emocionante. Isso é uma boa ideia para meu jogo?</li>\
+                    <li>Uma hierarquia de estruturas de tempo ajudaria meu jogo? Isto é, vários rounds curtos que, juntos, formam um grande round?</li>\
+                </ul>\
+                Pode ser muito difícil criar o timing certo do jogo, e isso pode significar a diferença entre um bom jogo ou um jogo ruim. Muitas vezes, faz sentido seguir\
+                o antigo princípio <i>vaudevilliano</i> do "Deixe-os querendo mais".\
+            '
+        });
+        
+        addLense({
             number: 28,
             title: "A Lente do Estado Dinâmico",
             smallTitle: "Estado Dinâmico",
@@ -876,6 +900,318 @@
                     <li>Todos os jogadores desempenham o mesmo papel, ou têm funções especiais?</li>\
                     <li>A cooperação é significativamente aprimorada quando não há como uma pessoa realizar uma tarefa sozinha. Meu jogo tem tarefas como essa?</li>\
                     <li>Tarefas que forçam a comunicação inspiram a cooperação. Quaisquer das minhas tarefas forçam a comunicação?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 45,
+            title: "A Lente da Competição versus Cooperação",
+            smallTitle: "Competição vs Cooperação",
+            page: { br: 187 },
+            set: game,
+            illustrator: "Diana Patton",
+            description: '\
+                <p>\
+                    O equilíbrio entre competição e cooperação pode ser alcançado de várias maneiras interessantes. Use essa lente para decidir se estão adequadamente\
+                    equilibradas no seu jogo. Faça estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Se "1" for competição e "10" cooperação, que número meu jogo deve obter?</li>\
+                    <li>Posso dar aos jogadores a opção de jogar cooperatva ou competitivamente?</li>\
+                    <li>Meu público prefere competição, cooperação, ou uma combinação das duas?</li>\
+                    <li>Competição em equipe é algo que faz sentido para meu jogo? Meu jogo é mais interessante com competição em equipe, ou competição individual?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 46,
+            title: "A Lente da Recompensa",
+            smallTitle: "Recompensa",
+            page: { br: 191 },
+            set: game,
+            illustrator: "Elizabeth Barndollar",
+            description: '\
+                <p>\
+                    Todo mundo gosta de ouvir que está fazendo um bom trabalho. Faça estas perguntas para determinar se o jogo distribui as recompensas certas nas\
+                    quantidades certas e na hora certa:\
+                </p>\
+                <ul class="questions">\
+                    <li>Que recompensas meu jogo distribui atualmente? Ele também pode distribuir outras?</li>\
+                    <li>Os jogadores sentem-se entusiasmados quando recebem recompensas em meu jogo, ou ficam entediados com elas? Por quê?</li>\
+                    <li>Reeber uma recompensa que você não entende é como não ganhar recompensa alguma. Meus jogadores compreendem as recompensas que recebem?</li>\
+                    <li>As recompensas que meu jogo distribui são regulares, previsíveis? Elas podem ser distribuídas de maneira mais variável?</li>\
+                    <li>Como minhas recompensas estão relacionadas entre si? Existe uma maneira de estarem mais bem conectadas?</li>\
+                    <li>Como minhas recompensas são construídas? Com muita rapidez, lentamente ou na velocidade certa?</li>\
+                </ul>\
+                Balancear recompensas é diferente para cada jogo. Um designer não precisa apenas se preocupar em distribuir as corretas, mas também distribuí-las na\
+                hora certa e na quantidade erta. Isso só pode ser determinado por meio de tentativa e erro - mesmo assim, provavelmente não será correto para todo\
+                mundo. Ao tentar balancear recompensas, é difícil ser perfeito - muitas vezes, você tem de se concentrar com "suficientemente bom".\
+            '
+        });
+        
+        addLense({
+            number: 47,
+            title: "A Lente da Punição",
+            smallTitle: "Punição",
+            page: { br: 194 },
+            set: game,
+            illustrator: "Crhis Daniel",
+            description: '\
+                <p>\
+                    A punição deve ser usada delicadamente, pois, afinal de contas, os jogadores estão em um jogo por vontade própria. Apropriadamente equilibrada, ela\
+                    dará mais significado a tudo no seu jogo, e os jogadores terão a sensação real de orgulho quando forem bem-sucedidos no jogo. Para examinar a punição\
+                    no seu jogo, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais são as punições em meu jogo?</li>\
+                    <li>Por que estou punindo os jogadores? O que espero conseguir com isso?</li>\
+                    <li>Minhas punições parecem justas para os jogadores? Por que sim ou por que não?</li>\
+                    <li>Existe uma maneira de transformar essas punições em recompensas e obter o mesmo efeito, ou um melhor?</li>\
+                    <li>Há equilíbrio entre minhas punições fortes e recompensas equivalentemente fortes?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 48,
+            title: "A Lente da Simplicidade / Complexidade",
+            smallTitle: "Simplicidade / Complexidade",
+            page: { br: 196 },
+            set: game,
+            illustrator: "Tom Smith",
+            description: '\
+                <p>\
+                    É difícil encontrar o equilíbrio certo entre simplicidade e complexidade, e isso deve ser feito pelas razões certas. Use essa lente para que seu jogo\
+                    tenha uma complexidade significativa que aparece a partir de um sistema simples. Faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais são os elementos de complexidade inata existentes em meu jogo?</li>\
+                    <li>Há um modo de essa complexidade inata ser transformada em complexidade emergente?</li>\
+                    <li>Elementos de complexidade emergente estão presentes em meu jogo? Caso contrário, por quê?</li>\
+                    <li>Há elementos do meu joo que são muito simples?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 49,
+            title: "A Lente da Elegância",
+            smallTitle: "Elegância",
+            page: { br: 198 },
+            set: game,
+            illustrator: "Joshua Seaver",
+            description: '\
+                <p>\
+                    A maioria dos "jogos clássicos" é considerada uma obra-prima da elegância. Use essa lente para tornar seu jogo o mais elegante possível. Faça a si\
+                    mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais são os elementos do meu jogo?</li>\
+                    <li>Quais são os objetivos de cada elemento? Some-os a fim de dar a um elemento uma "nota de elegância".</li>\
+                    <li>Para elementos com apenas um ou dois objetivos, alguns desses podem ser combinados ou totalmente removidos?</li>\
+                    <li>Para os elementos com vários objetivos, é possível que eles assumam outros?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 50,
+            title: "A Lente da Personalidade",
+            smallTitle: "Personalidade",
+            page: { br: 199 },
+            set: game,
+            illustrator: "Kyle Gabler",
+            description: '\
+                <p>\
+                    Elegância e personalidade são opostas. Elas são como versões em miniatura da simplicidade e complexidade, e devem ser mantidas em equilíbrio. Para\
+                    certificar-se de que seu jogo tem peculiaridades atraentes e definidoras, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Existe alguma coisa estranha em meu jogo que os jogadores comentam com entusiasmo?</li>\
+                    <li>Meu jogo tem qualidades engraçadas que o tornam único?</li>\
+                    <li>Meu jogo tem falhas das quais os jogadores gostam?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 51,
+            title: "A Lente da Imaginação",
+            smallTitle: "Imaginação",
+            page: { br: 201 },
+            set: player,
+            illustrator: "Elizabeth Barndollar",
+            description: '\
+                <p>\
+                    Todos os jogos têm algum elemento de imaginação e algum elmento de conexão com a realidade. Use essa lente para ajudar a encontrar o equilíbrio\
+                    entre detalhes e imaginação. Faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>O que o jogador precisa entender para jogar meu jogo?</li>\
+                    <li>Algum elemento da imaginação pode ajudá-lo a entender isso melhor?</li>\
+                    <li>Que detalhes realistas e de alta qualidade podemos fornecer nesse jogo?</li>\
+                    <li>Quais detalhes seriam de baixa qualidade se fossem fornecidos? A imaginação, em vez disso, pode preencher a lacuna?</li>\
+                    <li>Posso dar mais detalhes que a imaginação será capaz de reutilizar repeditamente?</li>\
+                    <li>Quais detalhes forneço que inspiram a imaginação?</li>\
+                    <li>Quais detalhes forneço que sufocam a imaginação?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 52,
+            title: "A Lente da Economia",
+            smallTitle: "Economia",
+            page: { br: 204 },
+            set: game,
+            illustrator: "Sam Yip",
+            description: '\
+                <p>\
+                    Fornecer a um jogo uma economia pode lhe dar profunidade surpreendente e vida própria. Mas, como todas as coisas vivas, essa pode ser difícil de\
+                    controlar. Use essa lente para manter sua economia balanceada:\
+                </p>\
+                <ul class="questions">\
+                    <li>Como meus jogadores podem ganhar dinheiro? Deve haver outras maneiras?</li>\
+                    <li>O que meus jogadores podem comprar? Por que?</li>\
+                    <li>É muito fácil ganhar dinheiro? Muito difícil? Como posso mudar isso?</li>\
+                    <li>As escolhas entre ganhar e gastar são significativas?</li>\
+                    <li>Uma moeda universal é uma boa ideia em meu jogo, ou deve haver moedas específicas?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 53,
+            title: "A Lente do Balanceamento",
+            smallTitle: "Balanceamento",
+            page: { br: 205 },
+            set: game,
+            illustrator: "Samp Yip",
+            description: '\
+                <p>\
+                    Há muitos tipos de balanceamento nos jogos, e todos são importantes. Entretanto, é fácil perder-se nos detalhes e esquecer o quadro geral. Utilize\
+                    essa lente simples para resolver situações difíceis, e faça a si mesmo a única pergunta importante:\
+                </p>\
+                <ul class="questions">\
+                    <li>Meu jogo é bom? Por que sim ou por que não?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 54,
+            title: "A Lente da Acessibilidade",
+            smallTitle: "Acessibilidade",
+            page: { br: 213 },
+            set: game,
+            illustrator: "Karen Phillips",
+            description: '\
+                <p>\
+                    Quando você apresenta um quebra-cabeça aos jogadores (ou um conjunto de qualquer tipo), eles devem ser capazes de visualizar com clareza quais\
+                    seriam os primeiros passos. Faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Como os jogadores sabem como começar a resolver meu quebra-cabeça, ou jogar meu jogo? Preciso explicar, ou isso é óbvio?</li>\
+                    <li>\
+                        Meu quebra-cabeça ou jogo funciona como algo que eles já viram antes? Em caso positivo, como posso chamar a atenção deles para essa semelhança?\
+                        Se não, como posso fazê-los compreender como ele funciona?\
+                    </li>\
+                    <li>\
+                        Meu quebra-cabeça ou jogo atrai as pessoas e faz com que elas queiram tocar e manipulá-lo? Em caso negativo, como posso mudá-lo para que isso\
+                        aconteça?\
+                    </li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 55,
+            title: "A Lente da Progressão Visível",
+            smallTitle: "Progressão Visível",
+            page: { br: 214 },
+            set: game,
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>\
+                    Os jogadores precisam ver que eles estão avançando ao solucionar um problema difícil. Para certificar-se de que eles recebem esse feedback, faça a\
+                    si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>O que significa progressão no meu jogo ou quebra-cabeças?</li>\
+                    <li>Há progressão suficiente no meu jogo? Existe uma maneira de adicionar mais passos intermediários de sucesso progressivo?</li>\
+                    <li>Qual progressão é visível, qual progressão está oculta? Posso encontrar uma maneira de revelar o que está oculto?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 56,
+            title: "A Lente do Paralelismo",
+            smallTitle: "Paralelismo",
+            page: { br: 216 },
+            set: game,
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>O paralelismo no seu quebra-cabeça agrega benefícios paralelos à experiência do jogador. Para usar essa lente, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>\
+                        Há gargalos no meu design e isso impede que os jogadores avancem se não puderem resolver um desafio específico? Se houver, posso adicionar desafios\
+                        paralelos para que um jogador trabalhe neles se esse desafio levá-los a encalhar?\
+                    </li>\
+                    <li>\
+                        Se desafios paralelos forem muito semelhantes, o paralelismo oferecerá poucos benefícios. Meus desafios paralelos são suficientemente diferentes\
+                        entre si para que os jogadores possam beneficiar-se dessa diversidade?\
+                    </li>\
+                    <li>\
+                        Meus desafios paralelos podem, de alguma forma, ser conectados? Há uma maneira de fazer progressos em um para que seja mais fácil resolver os\
+                        outros?\
+                    </li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 57,
+            title: "A Lente da Pirâmide",
+            smallTitle: "Pirâmide",
+            page: { br: 217 },
+            set: game,
+            illustrator: "Sam Yip",
+            description: '\
+                <p>\
+                    Pirâmides nos fascinam porque elas têm um ponto alto singular. Para dar ao seu quebra-cabeça o fascínio das pirâmides antigas, faça a si mesmo estas\
+                    perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Há uma maneira de todas as pelas do meu quebra-cabeça serem inseridas em um desafio singular no final?</li>\
+                    <li>\
+                        Grandes pirâmides geralmente são feitas de pequenas pirâmides - é possível ter uma hierarquia de elementos do quebra-cabeça cada vez mais\
+                        desafiadora, levando gradualmente a um desafio maior?\
+                    </li>\
+                    <li>O desafio no topo da pirâmide é interessante, atraente e claro? Ele faz as pessoas quererem trabalhar para chegar a ele?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 58,
+            title: "A Lente do Quebra-cabeça",
+            smallTitle: "Quebra-cabeça",
+            page: { br: 219 },
+            set: game,
+            illustrator: "Elizabeth Barndollar",
+            description: '\
+                <p>\
+                    Quebra-cabeças fazem o jogador para e pensar. Para assegurar que seus quebra-cabeças fazem tudo o que você quer para moldar a experiência do\
+                    jogador, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais são os quebra-cabeças no meu jogo?</li>\
+                    <li>Devo ter mais ou menos quebra-cabeças? Por quê?</li>\
+                    <li>Quais dos 10 princípios sobre quebra-cabeças aplicam-se a cada um dos meus quebra-cabeças?</li>\
+                    <li>Há algum quebra-cabeça incongruente? Como faço para integrá-lo melhor no jogo? (Utilize a <lense-ref>49</lense-ref>, para ajudar a fazer isso.)</li>\
                 </ul>\
             '
         });
