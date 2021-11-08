@@ -156,7 +156,7 @@
             template: function (element) {
                 var number = parseInt(element.html().trim());
                 var lense = data.lenses.single("$.number == " + number);
-                var title = lense.title.substring(3);
+                var title = lense.title.substring(2);
 
                 return "<span class='lense-ref'>{0}</span>".format(title);
             }
