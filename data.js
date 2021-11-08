@@ -1215,6 +1215,140 @@
                 </ul>\
             '
         });
+        
+        addLense({
+            number: 59,
+            title: "A Lente do Controle",
+            smallTitle: "Controle",
+            page: { br: 222 },
+            set: player,
+            illustrator: "Nathan Mazur",
+            description: '\
+                <p>\
+                    O uso dessa lente vai além da simples análise de sua interface, uma vez que um controle significativo é essencial para a interatividade imersiva. Para\
+                    usar essa lente, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <liQuando os jogadores usam a interface, ela faz o que é esperado: Se não, por quê?</li>\
+                    <li>Interfaces intuitivas dão uma sensação de controle. Sua interface é fácil ou difícil de dominar?</li>\
+                    <li>Os jogadores sentem que têm forte influência sobre o resultado do jogo? Se não, como você pode mudar isso?</li>\
+                    <li>Sentir-se poderoso = senti-se no controle. Os jogadores se sentem poderosos? Você pode de alguma forma fazê-los se sentirem mais poderosos?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 60,
+            title: "A Lente da Interface Física",
+            smallTitle: "Interface Física",
+            page: { br: 226 },
+            set: game,
+            illustrator: "Zachary D. Coe",
+            description: '\
+                <p>\
+                    De alguma forma, o jogador tem interação física com seu jogo. É fácil cair na armadinha de copiar interfaces físicas existentes. Use essa lente para\
+                    garantir que sua interface física é bem adequada ao seu jogo fazendo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>O que o jogador seleciona e toca? Isso pode tornar-se mais agradável?</li>\
+                    <li>Como isso pode ser mapeado para as ações no mundo do jogo? O mapeamento pode ser mais direto?</li>\
+                    <li>Se não puder criar uma interface personalizada, que metáfora usaria ao mapear as entradas para o mundo do jogo?</li>\
+                    <li>Com o que a interface física se parece, vista sob a <lense-ref>17</lense-ref>?</li>\
+                    <li>\
+                        Como o jogador vê, ouve e toca o mundo do jogo? Existe uma forma de incluir um dispositivo de saída física que fará o mundo parecer mais real na\
+                        imaginação do jogador?\
+                    </li>\
+                </ul>\
+                O mundo dos videogames, às vezes, passa por períodos de seca em que designers acham que não é viável criar interfaces físicas. Mas o mercado vive da\
+                experimentação e inovação e, de repente, interfaces físicas especialmente criadas, como a esteira Dance Dance Revolution, a guitarra Guitar Hero e o\
+                Wiimote aparecem, dando vida nova à velha jogabilidade e fornecendo aos jogadores uma nova maneira de interagir com a antiga mecânica dos jogos.\
+            '
+        });
+        
+        addLense({
+            number: 61,
+            title: "A Lente da Interface Virtual",
+            smallTitle: "Interface Virtual",
+            page: { br: 226 },
+            set: game,
+            illustrator: "Chris Daniel",
+            description: '\
+                <p>\
+                    Criar interfaces virtuais pode ser bem complicado. Se malfeitas, tornam-se uma barreira entre o jogador e o mundo do jogo. Se benfeitas, ampliam o poder\
+                    e o controle que um jogador tem no mundo do jogo. Faça estas perguntas para certificar-se de que sua interface virtual aprimora, ao máximo, a experiência\
+                    do jogador:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais informações um jogador precisa receber que não são óbvias apenas olhando para o mundo do jogo?</li>\
+                    <li>Quando o jogador precisa dessas informações? O tempo todo? Apenas ocasionalmente? Apenas no final de um nível?</li>\
+                    <li>Como essas informações podem ser fornecidas ao jogador de maneira que não atrapalhe as interações do jogador com o mundo do jogo?</li>\
+                    <li>\
+                        Há elementos do mundo do jogo com os quais é mais fácil interagir utilizando uma interface virtual (como um menu pop-up, por exemplo) do que se a\
+                        interação ocorresse diretamente?\
+                    </li>\
+                    <li>\
+                        Que tipo de interface virtual é mais adequada para minha interface física? Menus pop-up, por exemplo, são uma aposta ruim para um controle do tipo\
+                        gamepad.\
+                    </li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 62,
+            title: "A Lente da Transparência",
+            smallTitle: "Transparência",
+            page: { br: 227 },
+            set: game,
+            illustrator: "Jesse Schell",
+            description: '\
+                <p>\
+                    A interface ideal torna-se invisível ao jogador, deixando sua imaginação completamente imersa no mundo do jogo. Para assegurar essa invisibilidade, faça\
+                    a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais são os desejos dos jogadores? A interface deixa os jogadores fazer o que eles querem?</li>\
+                    <li>A interface é suficientemente simples para que, com a prática, os jogadores possam usá-la sem pensar?</li>\
+                    <li>\
+                        Novos jogadores acham a interface intuitiva? Se não, ela, dede alguma forma, pode tornar-se mais intuitiva? Permitir que os jogadores personalizem\
+                        os controles facilita ou prejudica?\
+                    </li>\
+                    <li>\
+                        A interface funciona bem em todas as istuações, ou há casos (perto de um canto, ir muito rápido etc.) em que se comporta de maneira que confundirá\
+                        o jogador?\
+                    </li>\
+                    <li>\
+                        Os jogadores podem continuar a utilizar a interface bem em situações estressantes, ou começam a se atrapalhar com os controles, ou perder informações\
+                        cruciais? Se isso ocorre, como pode ser melhorado?\
+                    </li>\
+                    <li>Há algo na interface que confunde os jogadores? Em qual das seis setas da interface isso acontece?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 63,
+            title: "A Lente do Feedback",
+            smallTitle: "Feedback",
+            page: { br: 230 },
+            set: game,
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>\
+                    O feedback que o jogador recebe do jogo é composto de muitas coisas, avaliação, recompensa, instrução, estímulo e desafio. Use essa lente para\
+                    certirficar-se de que seu ciclo de feedback cria a experiência que você quer fazendo sempre estas perguntas no seu jogo:\
+                </p>\
+                <ul class="questions">\
+                    <li>O que os jogadores precisam saber nesse momento?</li>\
+                    <li>O que os jogadores querem saber nesse momento?</li>\
+                    <li>O que você quer que os jogadores sintam nesse momento? Como pode você dar feedback que crie essa sensação?</li>\
+                    <li>O que os jogadores querem sentir nesse momento? Há uma oportunidade para que eles criem uma situação em que sentem isso?</li>\
+                    <li>Qual é o objetivo do jogador nesse momento? Que tipo de feedback irá ajudá-lo a alcançar esse objetivo?</li>\
+                </ul>\
+                Usar essa lente exige algum esforço, pois o feedback em um jogo é contínuo, mas deve ser diferente em cada situação. É necessário um grade esforço mental\
+                para usar essa lente em cada momento do seu jogo, mas é um tempo bem gasto, porque vai ajudar a garantir que o jogo seja claro, desafiador e gratificante.\
+            '
+        });
 
         
         // addLense({
