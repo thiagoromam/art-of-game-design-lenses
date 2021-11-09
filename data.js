@@ -59,8 +59,8 @@
             illustrator: "Diana Patton",
             description: '\
                 <p>\
-                    Surpresa é tão básico que podemos facilmente nos esquecer dela. Utilize essa lente para que você não se esqueça de agregar a seu jogo surpresas interessantes.\
-                    Faça a si mesmo estas perguntas:\
+                    Surpresa é tão básico que podemos facilmente nos esquecer dela. Utilize essa lente para que você não se esqueça de agregar a seu jogo surpresas\
+                    interessantes. Faça a si mesmo estas perguntas:\
                 </p>\
                 <ul class="questions">\
                     <li>O que irá surpreender os jogadores quando jogarem meu jogo?</li>\
@@ -68,10 +68,10 @@
                     <li>Suas regras dão aos jogadores maneiras de surpreender um ao outro?</li>\
                     <li>Suas regras dão aos jogadores maneiras de surpreender a si próprios?</li>\
                 </ul>\
-                Surpresa é parte crucial de qualquer entretenimento - é a raiz do humor, da estratégia e da solução de problemas. Nosso cérebro é constituído para desfrutar surpresas.\
-                Em um experimento em que espirram doses de água com açúcar e de água pura na boca dos participantes, aqueles que receberam doses aleatórias consideraram a\
-                experiência muito mais agradável do que os que receberam doses de acordo com um padrão fixo, embora a mesma quantidade de açúcar tenha sido fornecida.\
-                Em outros experimentos, tomografias do cérebro revelaram que, mesmo durante surpresas desagradáveis, os centros de prazer do cérebro são acionados.\
+                Surpresa é parte crucial de qualquer entretenimento - é a raiz do humor, da estratégia e da solução de problemas. Nosso cérebro é constituído para desfrutar\
+                surpresas. Em um experimento em que espirram doses de água com açúcar e de água pura na boca dos participantes, aqueles que receberam doses aleatórias\
+                consideraram a experiência muito mais agradável do que os que receberam doses de acordo com um padrão fixo, embora a mesma quantidade de açúcar tenha sido\
+                fornecida. Em outros experimentos, tomografias do cérebro revelaram que, mesmo durante surpresas desagradáveis, os centros de prazer do cérebro são acionados.\
             '
         });
 
@@ -142,8 +142,8 @@
             illustrator: "Cheryl Ceol",
             description: '\
                 <p>\
-                    Para utilizar essa lente, pense nos problemas que seus jogadores devem resolver para ter sucesso no seu jogo, pois cada jogo tem problemas a serem resolvidos.\
-                    Faça a si mesmo estas perguntas:\
+                    Para utilizar essa lente, pense nos problemas que seus jogadores devem resolver para ter sucesso no seu jogo, pois cada jogo tem problemas a serem\
+                    resolvidos. Faça a si mesmo estas perguntas:\
                 </p>\
                 <ul class="questions">\
                     <li>Quais problemas meu jogo solicita que o jogador resolva?</li>\
@@ -626,8 +626,8 @@
                 regras de um jogo de maneira gradual e experimental. A mente do designer costuma funcionar no território das "regras operacionais", ocasionalmente alternando\
                 para a perspectiva das "regras fundamentais" ao pensar sobre como mudar ou melhorar o jogo. As "normas escritas" costumam vir no final, depois que o jogo\
                 torna-se efetivamente jogável. Parte do trabalho do designer é certificar-se de que há regras que abrangem todas as circunstâncias. Certifique-se de observar\
-                cuidadosamente à medida que você faz os testes de jogabilidade, porque é durante esses testes que aparecerão brechas em suas regras - se você apenas remendá-las\
-                rapidamente sem fazeranotações, a mesma brecha aparecerá mais tarde. Um jogo são suas regras - forneça o tempo e a consideração que merecem.\
+                cuidadosamente à medida que você faz os testes de jogabilidade, porque é durante esses testes que aparecerão brechas em suas regras - se você apenas\
+                remendá-las rapidamente sem fazeranotações, a mesma brecha aparecerá mais tarde. Um jogo são suas regras - forneça o tempo e a consideração que merecem.\
             '
         });
         
@@ -724,8 +724,8 @@
             illustrator: "Nick Daniel",
             description: '\
                 <p>\
-                    Para usar a Lente da Equidade, pense cuidadosamente sobre o jogo pelo ponto de vista de cada jogador. Levando em conta o nível de habilidade de cada jogador,\
-                    encontre uma maneira de dar aos jogadores uma chance de ganhar que cada um considere justa.\
+                    Para usar a Lente da Equidade, pense cuidadosamente sobre o jogo pelo ponto de vista de cada jogador. Levando em conta o nível de habilidade de cada\
+                    jogador, encontre uma maneira de dar aos jogadores uma chance de ganhar que cada um considere justa.\
                 </p>\
                 <p>Faça a si mesmo estas perguntas:</p>\
                 <ul class="questions">\
@@ -1476,7 +1476,10 @@
                 <p>Adoramos experimentar coisas de grande beleza. Use essa lente para transformar seu jogo em um prazer constante, fazendo a si mesmo estas perguntas:</p>\
                 <ul class="questions">\
                     <li>Quais elementos compõe meu jogo? Como pode cada um deles ser ainda mais belo?</li>\
-                    <li>Algumas coisas não são belas por si só, mas são belas se combinadas. Como os elementos do meu jogo são compostos de maneira que seja poética e bela?</li>\
+                    <li>\
+                        Algumas coisas não são belas por si só, mas são belas se combinadas. Como os elementos do meu jogo são compostos de maneira que seja poética e\
+                        bela?\
+                    </li>\
                     <li>O que significa beleza no contexto do meu jogo?</li>\
                 </ul>\
             '
@@ -1633,6 +1636,92 @@
                     <li>Como a narrativa sustenta outras partes da tétrade (estética, tecnologia, jogabilidade)? Ela pode fazer um trabalho melhor?</li>\
                     <li>Como as outras partes da tétrade sustentam a história? Elas podem fazer um trabalho melhor?</li>\
                     <li>Como minha história pode ser aprimorada?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 79,
+            title: "A Lente da Liberdade",
+            smallTitle: "Liberdade",
+            page: { br: 284 },
+            set: experience,
+            illustrator: "Nathan Mazur",
+            description: '\
+                <p>\
+                    A sensação de liberdade é uma das coisas que separam os jogos de outras formas de entretenimento. Para certificar-se de que os jogadores se sentem o mais\
+                    livre possível, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quando os jogadores têm liberdade de ação? Eles se sentem livres nesses momentos?</li>\
+                    <li>Quando estão limitados? Eles se sentem limitados nesses momentos?</li>\
+                    <li>Há algum lugar no qual se sintam mais livres do que agora?</li>\
+                    <li>Há algum lugar no qual são sobrecarregados pelo excesso de liberdade?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 81,
+            title: "A Lente do Controle",
+            smallTitle: "Controle",
+            page: { br: 293 },
+            set: game,
+            illustrator: "Cheryl Ceol",
+            description: '\
+                <p>\
+                    Todos os designers têm uma visão do que gostariam que os jogadores fizessem para ter uma experiência de jogo ideal. Para ajudar a assegurar que os\
+                    jogadores\
+                </p>\
+                <ul class="questions">\
+                    <li>Idealmente, o que quero que os jogadores façam?</li>\
+                    <li>Posso estabelecer limites para que os jogadores façam isso?</li>\
+                    <li>Posso definir objetivos para que os jogadores façam isso?</li>\
+                    <li>Posso criar uma interface para que os jogadores façam isso?</li>\
+                    <li>Posso usar design visual para que os jogadores façam isso?</li>\
+                    <li>Posso utilizar personagens no jogo que que os jogadores façam isso?</li>\
+                    <li>Posso usar músicas ou sons para que os jogadores façam isso?</li>\
+                    <li>Há algum outro método que eu possa usar para forçar os jogadores em direção a um comportamento ideal sem afetar a sensação de liberdade deles?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 82,
+            title: "A Lente da Cumplicidade",
+            smallTitle: "Cumplicidade",
+            page: { br: 298 },
+            set: game,
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>\
+                    Personagens devem cumprir seus papéis no mundo dos jogos, mas, quando possível, também agir como muitos subordinados do designer de jogos, trabalhando\
+                    em direção ao objetivo final do designer, que é assegurar uma experiência envolvente para o jogador. Para certificar-se de que as personagens cumprem\
+                    essa responsabilidade, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>O que quero que o jogador experimente?</li>\
+                    <li>Como as personagens podem ajudar a satisfazer essa experiência, sem comprometer seus objetivos no mundo do jogo?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 84,
+            title: "A Lente do Mundo",
+            smallTitle: "O Mundo",
+            page: { br: 307 },
+            set: game,
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>\
+                    O mundo do seu jogo é uma coisa que existe separadamente. Seu jogo é uma porta de entrada para esse lugar mágico que só existe na imaginação de seus\
+                    jogadores. Para assegurar que seu mundo tem poder e integridade, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Meu mundo é melhor do que o mundo real?</li>\
+                    <li>Pode haver várias portas de entrada para meu mundo? Em que elas diferem? Como suportam umas às outras?</li>\
+                    <li>Meu mundo está centrado em uma única história, ou muitas histórias poderiam acontecer aqui?</li>\
                 </ul>\
             '
         });
