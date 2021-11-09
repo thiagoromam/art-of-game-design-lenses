@@ -1349,6 +1349,163 @@
                 para usar essa lente em cada momento do seu jogo, mas é um tempo bem gasto, porque vai ajudar a garantir que o jogo seja claro, desafiador e gratificante.\
             '
         });
+        
+        addLense({
+            number: 64,
+            title: "A Lente da Suculência",
+            smallTitle: "Suculência",
+            page: { br: 233 },
+            set: game,
+            illustrator: "Patrick Mittereder",
+            description: '\
+                <p>\
+                    Chamar uma interface de "suculenta" pode parecer estúpido - embora seja muito comum ouvir uma interface com poucofeedback ser descrita como "seca".\
+                    Interfaces suculentas são divertidas no momento em que você as seleciona. Para maximizar a suculência, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Minha interface dá ao jogador feedback contínuo para suas ações? Se não, por quê?</li>\
+                    <li>O movimento de segunda ordem é criado pelas ações do jogador? Esse movimento é poderoso e interessante?</li>\
+                    <li>\
+                        Sistemas suculentos recompensam imediatamente o jogador de várias maneiras. Quando dou ao jogador uma recompensa, de quantas maneiras eu o estou\
+                        recompensando simultaneamente? Posso encontrar outras maneiras?\
+                    </li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 66,
+            title: "A Lente dos Canais e das Dimensões",
+            smallTitle: "Canais e Dimensões",
+            page: { br: 238 },
+            set: game,
+            illustrator: "Elizabeth Barndollar",
+            description: '\
+                <p>\
+                    Escolher como mapear informações do jogo para canais e dimensões é o coração do design da interface de jogos. Use essa lente para garantir que o aspecto\
+                    do jogo seja bem refletido e implementado. Faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais dados precisam ser transmitidos para o jogador, e quais são aqueles que ele transmitirá?</li>\
+                    <li>Quais são os dados mais importantes?</li>\
+                    <li>Quais canais estão disnponíveis para transmitir esses dados?</li>\
+                    <li>Quais canais são mais apropriados para quais dados? Por quê?</li>\
+                    <li>Quais dimensões estão disponíveis em diferentes canais?</li>\
+                    <li>Como devo usar essas dimensões?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 67,
+            title: "A Lente dos Modos",
+            smallTitle: "Modos",
+            page: { br: 240 },
+            set: game,
+            illustrator: "Patrick Collins",
+            description: '\
+                <p>\
+                    Uma interface de qualquer complexidade exigirá modos. Para certificar-se de que seus modos fazem o jogador se sentir poderoso, no controle e não se\
+                    confunda ou nem se sinta sobrecarregado, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais modos são necessários no meu jogo? Por quê?</li>\
+                    <li>Os modos podem ser separados ou combinados?</li>\
+                    <li>Há sobreposição de modos? Se houver, posso colocá-los em diferentes canais de entrada?</li>\
+                    <li>Quando os modos do jogo mudam, como o jogador sabe isso? O jogo pode comunicar a mudança no modo de mais de uma forma?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 69,
+            title: "A Lente da Curva de Interesse",
+            smallTitle: "Curva de Interesse",
+            page: { br: 252 },
+            set: experience,
+            illustrator: "Chris Daniel",
+            description: '\
+                <p>\
+                    O que exatamente atrai a mente humana muitas vezes parece diferente para cada pessoa, mas os padrões mais agradáveis dessa atração são notavelmente\
+                    semelhantes para todo mundo. Para ver como o interesse do jogador em relação à sua experiência muda ao longo do tempo, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Se eu desenhar uma curva de interesse da minha experiência, que forma ela terá?</li>\
+                    <li>Ela tem um gancho?</li>\
+                    <li>Ela tem níveis de interesse que aumntam gradualmente, pontuados por períodos de descanso?</li>\
+                    <li>Existe um <i>grand finale</i>, mais interessante do que tudo mais?</li>\
+                    <li>Que mudanças me dariam uma curva de interesse mais eficiente?</li>\
+                    <li>Há uma estrutura fractal na minha curva de interesse? Deveria haver?</li>\
+                    <li>\
+                        Minha intuição sobre a curva de interesse corresponde ao interesse dos jogadores? Se eu pedir para testadores do jogo desenharem uma curva de\
+                        interesse, qual seria sua aparência?\
+                    </li>\
+                </ul>\
+                Como todos os jogadores são diferentes, talvez você ache bem útil utilizar a Lente da Curva de Interesse e, simultaneamente, a <lense-ref>19</lense-ref>,\
+                criando uma única curva de interesse para cada um dos tipos de jogador que seu jogo pretende alcançar.\
+            '
+        });
+        
+        addLense({
+            number: 70,
+            title: "A Lente do Interesse Inerente",
+            smallTitle: "Interesse Inerente",
+            page: { br: 254 },
+            set: experience,
+            illustrator: "Patrick Mittereder",
+            description: '\
+                <p>\Algumas coisas são interessantes. Use essa lente para certificar-se de que o jogo tem qualidades intrinsecamente interessantes fazendo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Que aspectos do meu jogo vão despertar o interesse de um jogador imediatamente?</li>\
+                    <li>Meu jogo deixa o jogador ver ou fazer algo que nunca viu ou fez antes?</li>\
+                    <li>A que instintos básicos meu jogo apela? Ele pode apelar a outros desses instintos?</li>\
+                    <li>A quais instintos superiores meujogo apela? Ele pode apelar a outros desses instintos?</li>\
+                    <li>Acontecem mudanças drásticas e que podem ser antecipadas no meu jogo? Como elas podem ser ainda mais drásticas?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 71,
+            title: "A Lente da Beleza",
+            smallTitle: "Beleza",
+            page: { br: 255 },
+            set: experience,
+            illustrator: "Kyle Gabler",
+            description: '\
+                <p>Adoramos experimentar coisas de grande beleza. Use essa lente para transformar seu jogo em um prazer constante, fazendo a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Quais elementos compõe meu jogo? Como pode cada um deles ser ainda mais belo?</li>\
+                    <li>Algumas coisas não são belas por si só, mas são belas se combinadas. Como os elementos do meu jogo são compostos de maneira que seja poética e bela?</li>\
+                    <li>O que significa beleza no contexto do meu jogo?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 72,
+            title: "A Lente da Projeção",
+            smallTitle: "Projeção",
+            page: { br: 257 },
+            set: experience,
+            illustrator: "Kyle Gabler",
+            description: '\
+                <p>\
+                    Um indicador importante de que uma pessoa gosta de uma experiência é quando ela projeta sua imaginação nessa experiência. Ao fazer isso, o prazer da\
+                    experiência aumenta significativamente, quase como um círculo virtuoso. Para verificar se o jogo é bem adequado para induzir a projeção de seus jogadores,\
+                    faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>O que há no meu jogo com que os jogadores possam se relacionar? O que mais posso adicionar?</li>\
+                    <li>O que há no meu jogo que irá despertar a imaginação de um jogador? O que mais posso adicionar?</li>\
+                    <li>Há locais no jogo que os jogadores sempre querem visitar?</li>\
+                    <li>O jogador se transforma em uma personagem com a qual pode se identificar?</li>\
+                    <li>Há outras personagens no jogo que os jogadores se interessariam em conhecer (ou espionar)?</li>\
+                    <li>Os jogadores fazem coisas que eles gostariam de fazer na vida real e que não podem?</li>\
+                    <li>Há uma atividade no jogo que, quando um jogador começa a fazer, é difícil parar?</li>\
+                </ul>\
+            '
+        });
 
         
         // addLense({
