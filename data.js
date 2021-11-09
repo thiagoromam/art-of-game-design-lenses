@@ -1506,6 +1506,136 @@
                 </ul>\
             '
         });
+        
+        addLense({
+            number: 73,
+            title: "A Lente da Máquina de Criação Narrativa",
+            smallTitle: "Máquina de Criação Narrativa",
+            page: { br: 266 },
+            set: experience,
+            illustrator: "Jim Rugg",
+            description: '\
+                <p>\
+                    Um bom jogo é uma máquina que gera histórias quando as pessoas o jogam. Para certificar-se de que sua máquina de criação narrativa é a mais produtiva\
+                    possível, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>\
+                        Quando os jogadores têm diferentes escolhas sobre como atingir objetivos, histórias novas e diferentes podem aparecer. Como posso adicionar mais\
+                        dessas opções?\
+                    </li>\
+                    <li>Diferentes conflitos levam a diferentes historias. Como posso permitir que mais tipos de conflitos apareçam no meu jogo?</li>\
+                    <li>\
+                        Quando podem personalizar as personagens e o cenário, os jogadores se preocupam mais com os resultados da história, e histórias semelhantes podem\
+                        começar a parecer bem diferentes. Como posso deixar os jogadores personalizarem a história?\
+                    </li>\
+                    <li>Boas histórias tem boas curvas de interesse. Minhas regras levam a história com boas curvas de interesse?</li>\
+                    <li>A história só é boa se você afirmar isso. A quem seus jogadores podem contar a história que realmente importa?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 74,
+            title: "A Lente do Obstáculo",
+            smallTitle: "Obstáculo",
+            page: { br: 271 },
+            set: experience,
+            illustrator: "Sam Yip",
+            description: '\
+                <p>\
+                    Não vale a pena buscar um objetivo sem obstáculos. Use essa lente para certificar-se de que os obstáculos são aqueles que seus jogadores vão querer\
+                    superar.\
+                </p>\
+                <ul class="questions">\
+                    <li>Qual é o relacionamento entre a personagem principal e o objetivo? Por que a personagem se importa com ele?</li>\
+                    <li>Quais são os obstáculos entre a personagem e o objetivo?</li>\
+                    <li>Existe um antagonista que está por trás dos obstáculos? Qual é o relacionamento entre o protagonista e o antagonista?</li>\
+                    <li>O nível de dificuldades dos obstáculos aumenta gradualmente?</li>\
+                    <li>Alguns dizem que, "quanto maior o obstáculo, melhor a história". Seus obstáculos são suficientemente grandes? Eles podem ser maiores?</li>\
+                    <li>Grandes histórias frequentemente envolvem a transformação do protagonista a fim de superar o obstáculo. Como se protagonista se transforma?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 75,
+            title: "A Lente da Simplicidade e Transcendência",
+            smallTitle: "Simplicidade e Transcendência",
+            page: { br: 272 },
+            set: experience,
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>Para certificar-se de que você tem a combinação certa de simplicidade e transcêndencia, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Em que sentido meu mundo é mais simples do que o mundo real? Ele pode ser mais simples de outras maneiras?</li>\
+                    <li>Que tipo de poder transcendente forneço ao jogador? Como é possível fornecer ainda mais sem remover o desafio do jogo?</li>\
+                    <li>Minha combinação de simplicidade e transcendência é artificial ou fornece aos jogadores um tipo especial de realização de desejos?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 76,
+            title: "A Lente da Jornada do Herói",
+            smallTitle: "Jornada do Herói",
+            page: { br: 275 },
+            set: experience,
+            illustrator: "Chris Daniel",
+            description: '\
+                <p>\
+                    Muitas narrativas heroicas têm uma estrutura similar. Use essa lente para certificar-se de que todos os elementos que possam melhorar sua história\
+                    estejam presentes. Faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Minha narrativa tem elementos que a qualificam como uma história heróica?</li>\
+                    <li>Se tiver, como ela se harmoniza com a estrutura da jornada do herói?</li>\
+                    <li>Minha história pode ser aprimorada incluindo mais elementos arquetípicos?</li>\
+                    <li>Minha narrativa corresponde tão proximamente a essa forma que parece banalizada?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 77,
+            title: "A Lente da Coisa Mais Estranha",
+            smallTitle: "A Coisa Mais Estranha",
+            page: { br: 279 },
+            set: experience,
+            illustrator: "Reagan Heller",
+            description: '\
+                <p>\
+                    Incorporar coisas estranhas à sua história pode ajudar a dar um significado à mecânica incomum do jogo - o que pode despertar o interesse do jogador\
+                    e fazer seu mundo parecer especial. Muitas coisas que são muito estranhas, porém, tornarão sua história enigmática e inacessível. Para certificar-se\
+                    de que sua história tem o tipo certo de estranheza, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Qual é a coisa mais estranha na minha história?</li>\
+                    <li>Como posso certificar-me de que a coisa mais estranha não confunde ou afasta o jogador?</li>\
+                    <li>Se houver várias coisas estranhas, devo me livrar ou fundir algumas delas?</li>\
+                    <li>Se não há nada estranho na minha história, ela continua interessante?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 78,
+            title: "A Lente da Narrativa",
+            smallTitle: "Narrativa",
+            page: { br: 281 },
+            set: experience,
+            illustrator: "Diana Patton",
+            description: '\
+                <p>Faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Meu jogo realmente precisa de uma história? Por quê?</li>\
+                    <li>Por que os jogadores se interessariam por essa história?</li>\
+                    <li>Como a narrativa sustenta outras partes da tétrade (estética, tecnologia, jogabilidade)? Ela pode fazer um trabalho melhor?</li>\
+                    <li>Como as outras partes da tétrade sustentam a história? Elas podem fazer um trabalho melhor?</li>\
+                    <li>Como minha história pode ser aprimorada?</li>\
+                </ul>\
+            '
+        });
 
         
         // addLense({
