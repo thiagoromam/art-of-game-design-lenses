@@ -14,15 +14,17 @@
             return set;
         }
         function addLense(lense) {
-            var set = lense.set;
+            var sets = lense.sets;
 
             lense.id = lense.number;
-            delete lense.set;
+            delete lense.sets;
 
             lenses.push(lense);
-            set.lenses.push(lense.id);
+            sets.forEach(function (s) {
+                s.lenses.push(lense.id);
+            });
 
-            return set;
+            return lense;
         }
 
         var designer = addSet("Designer");
@@ -36,7 +38,7 @@
             title: "A Lente da Experiência Essencial",
             smallTitle: "Experiência Essencial",
             page: 21,
-            set: experience,
+            sets: [ experience ],
             illustrator: "Zachary D. Coe",
             description: '\
                 <p>Para utilizar essa lente, você deve parar de pensar no seu jogo e começar a pensar sobre a experiência do jogador. Faça a si mesmo estas perguntas:</p>\
@@ -55,7 +57,7 @@
             title: "A Lente da Surpresa",
             smallTitle: "Surpresa",
             page: { br: 27 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Diana Patton",
             description: '\
                 <p>\
@@ -80,7 +82,7 @@
             title: "A Lente da Diversão",
             smallTitle: "Diversão",
             page: { br: 27 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Jon Shulte",
             description: '\
                 <p>Diversão é desejável em quase todos os jogos, embora, às vezes, desafie a análise. Para maximizar a diversão de seu jogo, faça a si mesmo estas perguntas:</p>\
@@ -96,7 +98,7 @@
             title: "A Lente da Curiosidade",
             smallTitle: "Curiosidade",
             page: { br: 30 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Emma Backer",
             description: '\
                 <p>\
@@ -119,7 +121,7 @@
             title: "A Lente do Valor Endógeno",
             smallTitle: "Valor Endógeno",
             page: { br: 32 },
-            set: game,
+            sets: [ game ],
             illustrator: "Melanie Lam",
             description: '\
                 <p>Para utilizar essa lente, pense em como seus jogadores se sentem em relação a itens, objetos e pontuação no seu jogo. Faça a si mesmo estas perguntas:</p>\
@@ -138,7 +140,7 @@
             title: "A Lente da Solução de Problemas",
             smallTitle: "Solução de Problemas",
             page: { br: 37 },
-            set: game,
+            sets: [ game ],
             illustrator: "Cheryl Ceol",
             description: '\
                 <p>\
@@ -158,7 +160,7 @@
             title: "A Lente da Tétrade Elementar",
             smallTitle: "Tétrade Elementar",
             page: { br: 43 },
-            set: game,
+            sets: [ game ],
             illustrator: "Reagan Heller",
             description: '\
                 <p>\
@@ -178,7 +180,7 @@
             title: "A Lente do Design Holográfico",
             smallTitle: "Design Holográfico",
             page: { br: 46 },
-            set: process,
+            sets: [ process ],
             illustrator: "Zachary D. Coe",
             description: '\
                 <p>\
@@ -199,7 +201,7 @@
             title: "A Lente da Unificação",
             smallTitle: "Unificação",
             page: { br: 53 },
-            set: process,
+            sets: [ process ],
             illustrator: "Diana Patton",
             description: '\
                 <p>Para usar essa lente, pense na razão por trás disso tudo. Faça a si mesmo estas perguntas:</p>\
@@ -217,7 +219,7 @@
             title: "A Lente da Ressonância",
             smallTitle: "Ressonância",
             page: { br: 55 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>\
@@ -241,7 +243,7 @@
             title: "A Lente da Inspiração Infinita",
             smallTitle: "Inspiração Infinita",
             page: { br: 59 },
-            set: process,
+            sets: [ process ],
             illustrator: "Sam Yip",
             description: '\
                 <i>Quando você sabe ouvir, todo mundo é guru</i>\
@@ -272,7 +274,7 @@
             title: "A Lente da Formulação do Problema",
             smallTitle: "Formulação do Problema",
             page: { br: 62 },
-            set: process,
+            sets: [ process ],
             illustrator: "Cheryl Ceol",
             description: '\
                 <p>Para usar essa lente, pense no jogo como uma solução para um problema.</p>\
@@ -292,7 +294,7 @@
             title: "A Lente dos Oito Filtros",
             smallTitle: "Oito Filtros",
             page: { br: 79 },
-            set: process,
+            sets: [ process ],
             illustrator: "Chris Daniel",
             description: '\
                 <p>\
@@ -320,7 +322,7 @@
             title: "A Lente da Atenuação dos Riscos",
             smallTitle: "Atenuação dos Riscos",
             page: { br: 86 },
-            set: process,
+            sets: [ process ],
             illustrator: "Chris Daniel",
             description: '\
                 <p>\
@@ -342,7 +344,7 @@
             title: "A Lente do Brinquedo",
             smallTitle: "O Brinquedo",
             page: { br: 91 },
-            set: game,
+            sets: [ game ],
             illustrator: "Camila Kydland",
             description: '\
                 <p>Para usar essa lente, pare de pensar se é ou não divertido jogar seu jogo e comece a pensar se é divertido brincar com ele.</p>\
@@ -364,7 +366,7 @@
             title: "A Lente do Jogador",
             smallTitle: "O Jogador",
             page: { br: 106 },
-            set: player,
+            sets: [ player ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>Para usar essa lente, pare de pensar no seu jogo, e comece a pensar no seu jogador.</p>\
@@ -387,7 +389,7 @@
             title: "A Lente do Prazer",
             smallTitle: "Prazer",
             page: { br: 112 },
-            set: player,
+            sets: [ player ],
             illustrator: "Jim Rugg",
             description: '\
                 <p>Para usar essa lente, pense nos tipos de prazer que seu jogo fornece ou não.</p>\
@@ -407,7 +409,7 @@
             title: "A Lente do Fluxo",
             smallTitle: "Fluxo",
             page: { br: 122 },
-            set: player,
+            sets: [ player ],
             illustrator: "Diana Patton",
             description: '\
                 <p>\
@@ -435,7 +437,7 @@
             title: "A Lente das Necessidades",
             smallTitle: "Necessidades",
             page: { br: 127 },
-            set: player,
+            sets: [ player ],
             illustrator: "Chuck Hoover",
             description: '\
                 <p>Para usar essa lente, pare de pensar no seu jogo e comece a pensar em quais necessidades humanas básicas ele satisfaz.</p>\
@@ -457,7 +459,7 @@
             title: "A Lente da Avaliação",
             smallTitle: "Avaliação",
             page: { br: 128 },
-            set: player,
+            sets: [ player ],
             illustrator: "Joseph Grubb",
             description: '\
                 <p>Para decidir se o jogo é um bom juiz dos jogadores, faça a si mesmo estas perguntas:</p>\
@@ -476,7 +478,7 @@
             title: "A Lente do Espaço Funcional",
             smallTitle: "Espaço Funcional",
             page: { br: 135 },
-            set: game,
+            sets: [ game ],
             illustrator: "Cheryl Ceol",
             description: '\
                 <p>Para usar essa lente, pense no espaço em que o jogo realmente acontece quando todos os elementos na superfície são removidos.</p>\
@@ -496,7 +498,7 @@
             title: "A Lente do Tempo",
             smallTitle: "Tempo",
             page: { br: 189 },
-            set: game,
+            sets: [ game ],
             illustrator: "Sam Yip",
             description: '\
                 <p>\
@@ -520,7 +522,7 @@
             title: "A Lente do Estado Dinâmico",
             smallTitle: "Estado Dinâmico",
             page: { br: 140 },
-            set: game,
+            sets: [ game ],
             illustrator: "Chuck Hoover",
             description: '\
                 <p>Para usar essa lente, pense em quais informações mudam durante o jogo e quem está ciente disso. Faça a si mesmo estas perguntas:</p>\
@@ -545,7 +547,7 @@
             title: "A Lente da Emergência",
             smallTitle: "Emergência",
             page: { br: 143 },
-            set: game,
+            sets: [ game ],
             illustrator: "Reagan Heller",
             description: '\
                 <p>Para garantir que seu jogo tenha as qualidades interessantes da emergência, pergunte-se</p>\
@@ -564,7 +566,7 @@
             title: "A Lente da Ação",
             smallTitle: "Ação",
             page: { br: 144 },
-            set: game,
+            sets: [ game ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>Para usar essa lente, pense no que seus jogadores podem fazer ou não, e por quê.</p>\
@@ -587,7 +589,7 @@
             title: "A Lente dos Objetivos",
             smallTitle: "Objetivos",
             page: { br: 149 },
-            set: game,
+            sets: [ game ],
             illustrator: "Zachary D. Coe",
             description: '\
                 <p>Para assegurar que os objetivos de seu jogo são apropriados e bem balanceados, faça a si mesmo estas perguntas:</p>\
@@ -608,7 +610,7 @@
             title: "A Lente das Regras",
             smallTitle: "Regras",
             page: { br: 150 },
-            set: game,
+            sets: [ game ],
             illustrator: "Joshua Seaver",
             description: '\
                 <p>Para usar essa lente, examine profundamente seu jogo até compreender sua estrutura mais básica. Faça a si mesmo estas perguntas:</p>\
@@ -636,7 +638,7 @@
             title: "A Lente da Habilidade",
             smallTitle: "Habilidade",
             page: { br: 153 },
-            set: game,
+            sets: [ game ],
             illustrator: "Emma Backer",
             description: '\
                 <p>Para usar essa lente, pare de olhar para seu jogo e comece a olhar para as habilidades que seus jogadores precisam ter.</p>\
@@ -663,7 +665,7 @@
             title: "A Lente do Valor Esperado",
             smallTitle: "Valor Esperado",
             page: { br: 267 },
-            set: game,
+            sets: [ game ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>Para usar essa lente, pense na probabilidade de diferentes eventos ocorrerem no seu jogo, e o que isso significa para o jogador.</p>\
@@ -692,7 +694,7 @@
             title: "A Lente da Probabilidade",
             smallTitle: "Probabilidade",
             page: { br: 169 },
-            set: game,
+            sets: [ game ],
             illustrator: "Joshua Seaver",
             description: '\
                 <p>Para usar essa lente, focalize as partes do seu jogo que envolvem aleatoriedade e riscos, tendo em mente que essas duas coisas não são idênticas.</p>\
@@ -720,7 +722,7 @@
             title: "A Lente da Equidade",
             smallTitle: "Equidade",
             page: { br: 176 },
-            set: game,
+            sets: [ game ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>\
@@ -753,7 +755,7 @@
             title: "A Lente do Desafio",
             smallTitle: "Desafio",
             page: { br: 179 },
-            set: game,
+            sets: [ game ],
             illustrator: "Reagan Heller",
             description: '\
                 <p>\
@@ -776,7 +778,7 @@
             title: "A Lente das Escolhas Significativas",
             smallTitle: "Escolhas Significativas",
             page: { br: 181 },
-            set: game,
+            sets: [ game ],
             illustrator: "Chuck Hoover",
             description: '\
                 <p>Quando fazemos escolhas significativas, isso nos faz sentir que as coisas realmente importam. Para usar essa lente, faça a si mesmo estas perguntas:</p>\
@@ -794,7 +796,7 @@
             title: "A Lente da Triangularidade",
             smallTitle: "Triangularidade",
             page: { br: 182 },
-            set: game,
+            sets: [ game ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>\
@@ -815,7 +817,7 @@
             title: "A Lente da Habilidade versus a da Probabilidade",
             smallTitle: "Habilidade vs Probabilidade",
             page: { br: 184 },
-            set: game,
+            sets: [ game ],
             illustrator: "Nathan Mazur",
             description: '\
                 <p>Para ajudar a determinar como criar equilíbrio entre habilidade e probabilidade no seu jogo, faça a si mesmo estas perguntas:</p>\
@@ -836,7 +838,7 @@
             title: "A Lente da Mente e das Mãos",
             smallTitle: "Mente e Mãos",
             page: { br: 185 },
-            set: game,
+            sets: [ game ],
             illustrator: "Lisa Brown",
             description: '\
                 <p>\
@@ -862,7 +864,7 @@
             title: "A Lente da Competição",
             smallTitle: "Competição",
             page: { br: 186 },
-            set: game,
+            sets: [ game ],
             illustrator: "Elizabeth Barndollar",
             description: '\
                 <p>\
@@ -886,7 +888,7 @@
             title: "A Lente da Cooperação",
             smallTitle: "Cooperação",
             page: { br: 187 },
-            set: game,
+            sets: [ game ],
             illustrator: "Sam Yip",
             description: '\
                 <p>\
@@ -909,7 +911,7 @@
             title: "A Lente da Competição versus Cooperação",
             smallTitle: "Competição vs Cooperação",
             page: { br: 187 },
-            set: game,
+            sets: [ game ],
             illustrator: "Diana Patton",
             description: '\
                 <p>\
@@ -930,7 +932,7 @@
             title: "A Lente da Recompensa",
             smallTitle: "Recompensa",
             page: { br: 191 },
-            set: game,
+            sets: [ game ],
             illustrator: "Elizabeth Barndollar",
             description: '\
                 <p>\
@@ -956,7 +958,7 @@
             title: "A Lente da Punição",
             smallTitle: "Punição",
             page: { br: 194 },
-            set: game,
+            sets: [ game ],
             illustrator: "Crhis Daniel",
             description: '\
                 <p>\
@@ -979,7 +981,7 @@
             title: "A Lente da Simplicidade / Complexidade",
             smallTitle: "Simplicidade / Complexidade",
             page: { br: 196 },
-            set: game,
+            sets: [ game ],
             illustrator: "Tom Smith",
             description: '\
                 <p>\
@@ -1000,7 +1002,7 @@
             title: "A Lente da Elegância",
             smallTitle: "Elegância",
             page: { br: 198 },
-            set: game,
+            sets: [ game ],
             illustrator: "Joshua Seaver",
             description: '\
                 <p>\
@@ -1021,7 +1023,7 @@
             title: "A Lente da Personalidade",
             smallTitle: "Personalidade",
             page: { br: 199 },
-            set: game,
+            sets: [ game ],
             illustrator: "Kyle Gabler",
             description: '\
                 <p>\
@@ -1041,7 +1043,7 @@
             title: "A Lente da Imaginação",
             smallTitle: "Imaginação",
             page: { br: 201 },
-            set: player,
+            sets: [ player ],
             illustrator: "Elizabeth Barndollar",
             description: '\
                 <p>\
@@ -1065,7 +1067,7 @@
             title: "A Lente da Economia",
             smallTitle: "Economia",
             page: { br: 204 },
-            set: game,
+            sets: [ game ],
             illustrator: "Sam Yip",
             description: '\
                 <p>\
@@ -1087,7 +1089,7 @@
             title: "A Lente do Balanceamento",
             smallTitle: "Balanceamento",
             page: { br: 205 },
-            set: game,
+            sets: [ game ],
             illustrator: "Samp Yip",
             description: '\
                 <p>\
@@ -1105,7 +1107,7 @@
             title: "A Lente da Acessibilidade",
             smallTitle: "Acessibilidade",
             page: { br: 213 },
-            set: game,
+            sets: [ game ],
             illustrator: "Karen Phillips",
             description: '\
                 <p>\
@@ -1131,7 +1133,7 @@
             title: "A Lente da Progressão Visível",
             smallTitle: "Progressão Visível",
             page: { br: 214 },
-            set: game,
+            sets: [ game ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>\
@@ -1151,7 +1153,7 @@
             title: "A Lente do Paralelismo",
             smallTitle: "Paralelismo",
             page: { br: 216 },
-            set: game,
+            sets: [ game ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>O paralelismo no seu quebra-cabeça agrega benefícios paralelos à experiência do jogador. Para usar essa lente, faça a si mesmo estas perguntas:</p>\
@@ -1177,7 +1179,7 @@
             title: "A Lente da Pirâmide",
             smallTitle: "Pirâmide",
             page: { br: 217 },
-            set: game,
+            sets: [ game ],
             illustrator: "Sam Yip",
             description: '\
                 <p>\
@@ -1200,7 +1202,7 @@
             title: "A Lente do Quebra-cabeça",
             smallTitle: "Quebra-cabeça",
             page: { br: 219 },
-            set: game,
+            sets: [ game ],
             illustrator: "Elizabeth Barndollar",
             description: '\
                 <p>\
@@ -1221,7 +1223,7 @@
             title: "A Lente do Controle",
             smallTitle: "Controle",
             page: { br: 222 },
-            set: player,
+            sets: [ player ],
             illustrator: "Nathan Mazur",
             description: '\
                 <p>\
@@ -1242,7 +1244,7 @@
             title: "A Lente da Interface Física",
             smallTitle: "Interface Física",
             page: { br: 226 },
-            set: game,
+            sets: [ game ],
             illustrator: "Zachary D. Coe",
             description: '\
                 <p>\
@@ -1270,7 +1272,7 @@
             title: "A Lente da Interface Virtual",
             smallTitle: "Interface Virtual",
             page: { br: 226 },
-            set: game,
+            sets: [ game ],
             illustrator: "Chris Daniel",
             description: '\
                 <p>\
@@ -1299,7 +1301,7 @@
             title: "A Lente da Transparência",
             smallTitle: "Transparência",
             page: { br: 227 },
-            set: game,
+            sets: [ game ],
             illustrator: "Jesse Schell",
             description: '\
                 <p>\
@@ -1331,7 +1333,7 @@
             title: "A Lente do Feedback",
             smallTitle: "Feedback",
             page: { br: 230 },
-            set: game,
+            sets: [ game, player ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>\
@@ -1355,7 +1357,7 @@
             title: "A Lente da Suculência",
             smallTitle: "Suculência",
             page: { br: 233 },
-            set: game,
+            sets: [ game ],
             illustrator: "Patrick Mittereder",
             description: '\
                 <p>\
@@ -1378,7 +1380,7 @@
             title: "A Lente dos Canais e das Dimensões",
             smallTitle: "Canais e Dimensões",
             page: { br: 238 },
-            set: game,
+            sets: [ game ],
             illustrator: "Elizabeth Barndollar",
             description: '\
                 <p>\
@@ -1401,7 +1403,7 @@
             title: "A Lente dos Modos",
             smallTitle: "Modos",
             page: { br: 240 },
-            set: game,
+            sets: [ game ],
             illustrator: "Patrick Collins",
             description: '\
                 <p>\
@@ -1422,7 +1424,7 @@
             title: "A Lente da Curva de Interesse",
             smallTitle: "Curva de Interesse",
             page: { br: 252 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Chris Daniel",
             description: '\
                 <p>\
@@ -1451,7 +1453,7 @@
             title: "A Lente do Interesse Inerente",
             smallTitle: "Interesse Inerente",
             page: { br: 254 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Patrick Mittereder",
             description: '\
                 <p>\Algumas coisas são interessantes. Use essa lente para certificar-se de que o jogo tem qualidades intrinsecamente interessantes fazendo estas perguntas:</p>\
@@ -1470,7 +1472,7 @@
             title: "A Lente da Beleza",
             smallTitle: "Beleza",
             page: { br: 255 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Kyle Gabler",
             description: '\
                 <p>Adoramos experimentar coisas de grande beleza. Use essa lente para transformar seu jogo em um prazer constante, fazendo a si mesmo estas perguntas:</p>\
@@ -1490,7 +1492,7 @@
             title: "A Lente da Projeção",
             smallTitle: "Projeção",
             page: { br: 257 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Kyle Gabler",
             description: '\
                 <p>\
@@ -1515,7 +1517,7 @@
             title: "A Lente da Máquina de Criação Narrativa",
             smallTitle: "Máquina de Criação Narrativa",
             page: { br: 266 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Jim Rugg",
             description: '\
                 <p>\
@@ -1543,7 +1545,7 @@
             title: "A Lente do Obstáculo",
             smallTitle: "Obstáculo",
             page: { br: 271 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Sam Yip",
             description: '\
                 <p>\
@@ -1566,7 +1568,7 @@
             title: "A Lente da Simplicidade e Transcendência",
             smallTitle: "Simplicidade e Transcendência",
             page: { br: 272 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>Para certificar-se de que você tem a combinação certa de simplicidade e transcêndencia, faça a si mesmo estas perguntas:</p>\
@@ -1583,7 +1585,7 @@
             title: "A Lente da Jornada do Herói",
             smallTitle: "Jornada do Herói",
             page: { br: 275 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Chris Daniel",
             description: '\
                 <p>\
@@ -1604,7 +1606,7 @@
             title: "A Lente da Coisa Mais Estranha",
             smallTitle: "A Coisa Mais Estranha",
             page: { br: 279 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Reagan Heller",
             description: '\
                 <p>\
@@ -1626,7 +1628,7 @@
             title: "A Lente da Narrativa",
             smallTitle: "Narrativa",
             page: { br: 281 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Diana Patton",
             description: '\
                 <p>Faça a si mesmo estas perguntas:</p>\
@@ -1645,7 +1647,7 @@
             title: "A Lente da Liberdade",
             smallTitle: "Liberdade",
             page: { br: 284 },
-            set: experience,
+            sets: [ experience ],
             illustrator: "Nathan Mazur",
             description: '\
                 <p>\
@@ -1666,7 +1668,7 @@
             title: "A Lente do Controle",
             smallTitle: "Controle",
             page: { br: 293 },
-            set: game,
+            sets: [ game, player ],
             illustrator: "Cheryl Ceol",
             description: '\
                 <p>\
@@ -1691,7 +1693,7 @@
             title: "A Lente da Cumplicidade",
             smallTitle: "Cumplicidade",
             page: { br: 298 },
-            set: game,
+            sets: [ game ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>\
@@ -1711,7 +1713,7 @@
             title: "A Lente do Mundo",
             smallTitle: "Mundo",
             page: { br: 307 },
-            set: game,
+            sets: [ game ],
             illustrator: "Nick Daniel",
             description: '\
                 <p>\
@@ -1731,7 +1733,7 @@
             title: "A Lente do Avatar",
             smallTitle: "Avatar",
             page: { br: 314 },
-            set: player,
+            sets: [ player, game ],
             illustrator: "Cheryl Ceol",
             description: '\
                 <p>\
@@ -1751,7 +1753,7 @@
         //     title: "A Lente da",
         //     smallTitle: "",
         //     page: { br:  },
-        //     set: ,
+        //     sets: [  ],
         //     illustrator: "",
         //     description: '\
         //         <p></p>\
