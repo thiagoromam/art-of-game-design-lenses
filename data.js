@@ -1746,6 +1746,263 @@
                 </ul>\
             '
         });
+        
+        addLense({
+            number: 86,
+            title: "A Lente da Função das Personagens",
+            smallTitle: "Função das Personagens",
+            page: { br: 316 },
+            sets: [ game ],
+            illustrator: "Sam Yip",
+            description: '\
+                <p>Para certificar-se de que as personagens estão fazendo tudo que seu jogo precisa que façam, pergunte-se:</p>\
+                <ul class="questions">\
+                    <li>Quais são os papéis que as personagens devem desempenhar?</li>\
+                    <li>Quais personagens já imaginei?</li>\
+                    <li>Quais personagens se associam bem a quais papéis?</li>\
+                    <li>Uma personagem pode desempenhar mais de um papel?</li>\
+                    <li>Preciso mudar as personagens para que se adaptem melhor aos papéis?</li>\
+                    <li>Preciso de novas personagens?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 87,
+            title: "A Lente dos Traços de Personalidade",
+            smallTitle: "Traços de Personalidade",
+            page: { br: 317 },
+            sets: [ experience ],
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>Para assegurar que os trações da personalidade das personagens aparecem naquilo que dizem e fazem, pergunte-se:</p>\
+                <ul class="questions">\
+                    <li>Que traços de personalidade definem minha personagem?</li>\
+                    <li>Como esses traços de personalidade se manifestam em palavras, ações e aparência da minha personagem?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 88,
+            title: "A Lente do Circumplexo Interpessoal",
+            smallTitle: "Circumplexo Interpessoal",
+            page: { br: 319 },
+            sets: [ experience ],
+            illustrator: "Kwame' Babb",
+            description: '\
+                <p>\
+                    É fundamental entender os relacionamentos entre suas personagens. Uma maneira de fazer isso é criar um gráfico com um dos eixos rotulado hostil/amigável\
+                    e outro submisso/dominante. Escolha uma personagem para analisar e coloque-a no centro. Represente onde outras personagens estão em realação a ela, e\
+                    pergunte-se:\
+                </p>\
+                <ul class="questions">\
+                    <li>Há lacunas no gráfico? Por que existem? Seria melhor se as lacunas fossem preenchidas?</li>\
+                    <li>Há "personagens extremas" no gráfico? Se não, seria melhor se houvesse?</li>\
+                    <li>Os amigos da personagem estão no mesmo quadrante, ou em diferentes quadrantes? E se isso fosse diferente?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 89,
+            title: "A Lente da Teia das Personagens",
+            smallTitle: "Teia das Personagens",
+            page: { br: 321 },
+            sets: [ experience ],
+            illustrator: "Diana Patton",
+            description: '\
+                <p>Para detalahar melhor o relacionamento das personagens, crie uma lista de todas elas e pergunte-se:</p>\
+                <ul class="questions">\
+                    <li>Como, especificamente, cada personagem se sente em relação a cada uma das outras?</li>\
+                    <li>Há conexões não explicadas? Como posso usá-las?</li>\
+                    <li>Há muitas conexões semelhantes? Como elas podem ser mais diferentes?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 90,
+            title: "A Lente do Status",
+            smallTitle: "Status",
+            page: { br: 323 },
+            sets: [ experience ],
+            illustrator: "Chris Daniel",
+            description: '\
+                <p>\
+                    Quando as pessoas interagem, elas assumem comportamento diferentes dependendo dos níveis de status. Para tornar as personagens mais cientes delas mesmas,\
+                    pergunte-se:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais são os níveis de status relativo das personagens no meu jogo?</li>\
+                    <li>Como elas podem apresentar comportamentos de status adequados?</li>\
+                    <li>Conflitos de status são interessantes - como minhas personagens disputam status?</li>\
+                    <li>Mudanças do status são interessantes - onde elas acontecem no meu jogo?</li>\
+                    <li>Como dou ao jogador a oportunidade de expressar o status?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 91,
+            title: "A Lente da Transformação das Personagens",
+            smallTitle: "Transformação das Personagens",
+            page: { br: 327 },
+            sets: [ experience ],
+            illustrator: "Chris Daniel",
+            description: '\
+                <p>\
+                    Histórias poderosas são capazes de transformar suas personagens. Para assegurar que suas personagens se transformam de uma maneira interessante,\
+                    pergunte-se:\
+                </p>\
+                <ul class="questions">\
+                    <li>Como cada uma das minhas personagens se transforma ao longo do jogo?</li>\
+                    <li>Como comunico essas transformações para o jogador? Posso comunicá-las de uma forma mais clara, ou mais forte?</li>\
+                    <li>Há mudança suficiente?</li>\
+                    <li>As mudanças são surpreendentes e interessantes?</li>\
+                    <li>As mudanças são verossímeis?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 92,
+            title: "A Lente da Contradição Interna",
+            smallTitle: "Contradição Interna",
+            page: { br: 335 },
+            sets: [ experience ],
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>\
+                    Um bom jogo não pode conter propriedades que destroem o propósito do jogo. Para remover essas qualidades contraditórias, faça a si mesmo estas\
+                    perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Qual é o objetivo do meu jogo?</li>\
+                    <li>Quais são os objetivos de cada subsistema no meu jogo?</li>\
+                    <li>Existe alguma coisa no meu jogo que contradiz esses propósitos?</li>\
+                    <li>Se sim, como posso mudar isso?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 93,
+            title: "A Lente da Qualidade Inefável",
+            smallTitle: "Qualidade Inefável",
+            page: { br: 337 },
+            sets: [ experience ],
+            illustrator: "Chris Daniel",
+            description: '\
+                <p>\
+                    Certas coisas parecem especiais e maravilhosas por causa do seu design natural e orgânico. Para assegurar que seu jogo tenha essas propriedades,\
+                    faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Meu design tem uma sensação especial em relação à vida, ou partes do meu design parecem mortas? O que faria meu projeto parecer mais vivo?</li>\
+                    <li>Quais das 15 qualidades de Alexander meu design tem?</li>\
+                    <li>Ele poderia, de alguma forma, ter mais?</li>\
+                    <li>Onde meu projeto se parece com meu próprio eu?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 96,
+            title: "A Lente da Amizade",
+            smallTitle: "Amizade",
+            page: { br: 361 },
+            sets: [ experience ],
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>\
+                    As pessoas adoram jogar com amigos. Para certificar-se de que seu jogo tem as qualidades certas para deixar as pessoas fazerem e manterem amizades,\
+                    faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Qual o tipo de amizades que os jogadores procuram?</li>\
+                    <li>Como faço para que os jogadores quebrem o gelo?</li>\
+                    <li>Meus jogadores têm oportunidades suficientes de conversar uns com os outros? Eles têm o suficiente sobre o que falar?</li>\
+                    <li>Quando eles se tornam amigos?</li>\
+                    <li>Quais ferramentas posso dar aos jogadores para manter suas amizades?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 97,
+            title: "A Lente da Expressão",
+            smallTitle: "Expressão",
+            page: { br: 363 },
+            sets: [ player ],
+            illustrator: "Nathan Mazur",
+            description: '\
+                <p>\
+                    Quando os jogadores têm a oportunidade de se expressar, isso os torna vivos, orgulhosos, importantes e conectados. Para usar essa lente, faça a si\
+                    mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Como deixo os jogadores se expressarem?</li>\
+                    <li>O que estou esquecendo?</li>\
+                    <li>Os jogadores sentem-se orgulhosos de suas identidades? Por que sim ou por que não?</li>\
+                </ul>\
+                Essa lente é importante e necessária. Ela funciona muito bem em combinação com outras lentes, como a <lense-ref>71</lense-ref>, e a <lense-ref>90</lense-ref>.\
+            '
+        });
+        
+        addLense({
+            number: 98,
+            title: "A Lente da Comunidade",
+            smallTitle: "Comunidade",
+            page: { br: 367 },
+            sets: [ player ],
+            illustrator: "Diana Patton",
+            description: '\
+                <p>\
+                    Para certificar-se de que seu jogo promove uma comunidade forte, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>O conflito está no coração da minha comunidade?</li>\
+                    <li>Como a arquitetura molda minha comunidade?</li>\
+                    <li>Meu jogo dá suporte aos três níveis de experiência?</li>\
+                    <li>Existem eventos para a comunidade?</li>\
+                    <li>Por que os jogadores precisam uns dos outros?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 99,
+            title: "A Lente do Sofrimento",
+            smallTitle: "Sofrimento",
+            page: { br: 370 },
+            sets: [ player ],
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>Para certificar-se de que há o mínimo de sofrimento no seu jogo, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Quais sistemas no meu jogo impõem facilmente sofrimentos?</li>\
+                    <li>Como posso fazer o sofrimento ser um processo entediante no meu jogo?</li>\
+                    <li>Eu ignorei alguma brecha?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 100,
+            title: "A Lente do Amor",
+            smallTitle: "Amor",
+            page: { br: 375 },
+            sets: [ designer ],
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>Para usar essa lente, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Eu amo meu projeto? Se não, como posso mudar isso?</li>\
+                    <li>Será que todos na equipe amam o projeto? Se não, como isso pode ser mudado?</li>\
+                </ul>\
+            '
+        });
 
         
         // addLense({
