@@ -682,10 +682,10 @@
                 O valor esperado é uma das ferramentas mais valiosas para analisar o balanceamento do jogo. O desafio de usá-lo é encontrar uma maneira de representar\
                 numericamente tudo o que pode acontecer a um jogador. Ganhar e perder dinheiro é fácil de representar. Mas qual é o valor numérico de "botas de velocidade"\
                 que permitem correr mais rápido, ou de uma "porta de teletransporte" que permite pular dois níveis? Isso é difícil de quantificar perfeitamente - mas\
-                não significa que você não ossa fazer uma suposição. Como veremos no Capítulo 11, a medida que você vai passando por várias iterações no teste do jogo,\
-                ajustando parâmetros e valores no jogo, também ajustará suas próprias estimativas dos valores dos diferentes resultados. Quantificar esses elementos menos\
-                tangíveis pode ser bem esclarecedor por que faz você pensar concretamente sobre o que é valioso para o jogador e por quê - e esse conhecimento concreto\
-                o colocará no controle do balanceamento do seu jogo.\
+                não significa que você não ossa fazer uma suposição. A medida que você vai passando por várias iterações no teste do jogo, ajustando parâmetros e valores\
+                no jogo, também ajustará suas próprias estimativas dos valores dos diferentes resultados. Quantificar esses elementos menos tangíveis pode ser bem\
+                esclarecedor por que faz você pensar concretamente sobre o que é valioso para o jogador e por quê - e esse conhecimento concreto o colocará no controle\
+                do balanceamento do seu jogo.\
             '
         });
         
@@ -2000,6 +2000,215 @@
                 <ul class="questions">\
                     <li>Eu amo meu projeto? Se não, como posso mudar isso?</li>\
                     <li>Será que todos na equipe amam o projeto? Se não, como isso pode ser mudado?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 101,
+            title: "A Lente da Equipe",
+            smallTitle: "Equipe",
+            page: { br: 380 },
+            sets: [ designer ],
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>Para certificar-se de que a sua equipe funciona como uma máquina bem lubrificada, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Essa é a equipe certa para esse projeto? Por quê?</li>\
+                    <li>A equipe se comunica objetivamente?</li>\
+                    <li>A equipe se comunica com clareza?</li>\
+                    <li>Os membros da equipe sentem-se à vontade entre si?</li>\
+                    <li>Há um clima de confiança e respeito entre a equipe?</li>\
+                    <li>Em última análise, a equipe é capaz de permanecer unida em torno das decisões?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 102,
+            title: "A Lente da Documentação",
+            smallTitle: "Documentação",
+            page: { br: 387 },
+            sets: [ designer, player ],
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>Para assegurar que você escreverá os documentos necessários e ignorará aqueles de que não precisa, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>O que precisamos nos lembrar ao criar esse jogo?</li>\
+                    <li>O que precisa ser comunicado ao criar esse jogo?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 103,
+            title: "A Lente do Playtest",
+            smallTitle: "Playtest",
+            page: { br: 401 },
+            sets: [ designer, player ],
+            illustrator: "Chris Daniel",
+            description: '\
+                <p>O playtest é sua oportunidade de ver o jogo em ação. Para Assegurar que seus playtests sejam tão bons quanto podem ser, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li><strong>Por que</strong> estamos fazendo um playtest?</li>\
+                    <li><strong>Quem</strong> deve fazê-lo?</li>\
+                    <li><strong>Onde</strong> ele deve ser feito?</li>\
+                    <li><strong>O que</strong> vamos procurar?</li>\
+                    <li><strong>Como</strong> é que vamos obter as informações de que precisamos?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 104,
+            title: "A Lente da Tecnologia",
+            smallTitle: "Tecnologia",
+            page: { br: 412 },
+            sets: [ game ],
+            illustrator: "Joseph Grubb",
+            description: '\
+                <p>Para certificar-se de que você utiliza as tecnologias corretas da maneira correta, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Que tecnologias ajudarão a fornecer a experiência que quero criar?</li>\
+                    <li>Eu utilizo essas tecnologias de maneira essencial ou decorativa?</li>\
+                    <li>Se eu não as utilizo de maneira essencial, devo utilizá-las?</li>\
+                    <li>Essa tecnologia é tão legal quanto acho que é?</li>\
+                    <li>Existe uma "tecnologia revolucionária" que eu deveria considerar?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 105,
+            title: "A Lente da Bola de Cristal",
+            smallTitle: "Bola de Cristal",
+            page: { br: 413 },
+            sets: [ experience ],
+            illustrator: "Diana Patton",
+            description: '\
+                <p>Se você quer conhecer o futuro da tecnologia específica de um jogo, faça a si mesmo estas perguntas, e responda-as da maneira mais concreta possível:</p>\
+                <ul class="questions">\
+                    <li>Como ____ será daqui a dois anos? Por quê?</li>\
+                    <li>Como ____ será daqui a quatro anos? Por quê?</li>\
+                    <li>Como ____ será daqui a dez anos? Por quê?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 107,
+            title: "A Lente do Cliente",
+            smallTitle: "O Cliente",
+            page: { br: 420 },
+            sets: [ designer ],
+            illustrator: "Kyle Gabler",
+            description: '\
+                <p>Se estiver criando um jogo para outra pessoa, você deve conhecer o que ela quer. Faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>O que o cliente diz que quer?</li>\
+                    <li>O que o cliente acha que quer?</li>\
+                    <li>O que o cliente realmente quer, no fundo do coração?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 108,
+            title: "A Lente do Pitch",
+            smallTitle: "Pitch",
+            page: { br: 432 },
+            sets: [ designer ],
+            illustrator: "Nathan Mazur",
+            description: '\
+                <p>Para garantir que seu <i>pitch</i> é o melhor possível, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Por que você está tentando vender esse jogo para esse cliente?</li>\
+                    <li>O que você considera "um <i>pitch</i> bem-sucedido"?</li>\
+                    <li>O que ele contém para as pessoas para as quais você está tentando vender?</li>\
+                    <li>O que as pessoas para as quais você está tentando vender precisam conhecer sobre seu jogo?</li>\
+                    <li>Se tentar vender para uma <i>publisher</i>, a coisa mais importante para ele é se o jogo pode dar lucro, e quanto.</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 109,
+            title: "A Lente do Lucro",
+            smallTitle: "Lucro",
+            page: { br: 439 },
+            sets: [ process ],
+            illustrator: "Nick Daniel",
+            description: '\
+                <p>Lucros mantém o setor de jogos vivo. Faça estas perguntas para ajudar seu jogo a ser lucrativo.</p>\
+                <ul class="questions">\
+                    <li>Onde é investido o dinheiro no modelo de negócios do meu jogo? Por quê?</li>\
+                    <li>Qual o custo para produzir, comercializar e distribuir esse jogo? Por quê?</li>\
+                    <li>Quantas unidades precisam ser vendidas antes de meu jogo alcançar um ponto de equilíbrio?</li>\
+                    <li></li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 110,
+            title: "A Lente da Transformação",
+            smallTitle: "Transformação",
+            page: { br: 452 },
+            sets: [ player ],
+            illustrator: "Nathan Mazur",
+            description: '\
+                <p>\
+                    Jogos criam experiências e experiências mudam as pessoas. Para certificar-se de que somente as melhores mudanças acontecem com seus jogadores, faça\
+                    a você mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Como meu jogo pode mudar os jogadores para melhor?</li>\
+                    <li>Como meu jogo pode mudar os jogadores para pior?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 111,
+            title: "A Lente da Responsabilidade",
+            smallTitle: "Responsabilidade",
+            page: { br: 457 },
+            sets: [ designer ],
+            illustrator: "Zachary D. Coe",
+            description: '\
+                <p>Para cumprir suas obrigações como um designer de jogos, faça a voce mesmo esta pergunta:</p>\
+                <ul class="questions">\
+                    <li>Meu jogo ajuda as pessoas? Como?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 112,
+            title: "A Lente do Corvo",
+            smallTitle: "O Corvo",
+            page: { br: 460 },
+            sets: [ designer ],
+            illustrator: "Tom Smith",
+            description: '\
+                <p>Para lembrá-lo que deve trabalhar apenas no que é importante, faça a si mesmo esta pergunta:</p>\
+                <ul class="questions">\
+                    <li>Vale a pena investir meu tempo para criar esse jogo?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: "∞",
+            title: "A Lente do seu Objetivo Secreto",
+            smallTitle: "Objetivo Secreto",
+            page: { br: 461 },
+            sets: [ designer ],
+            illustrator: "Todd Swanson",
+            description: '\
+                <p>Para certificar-se de que você está trabalhando na direção de seu objetivo real, faça a si mesmo a única pergunta que é importante:</p>\
+                <ul class="questions">\
+                    <li>Por que estou fazendo isso?</li>\
                 </ul>\
             '
         });

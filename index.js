@@ -112,8 +112,7 @@
                 }
             }
             
-            // scope.lenses = lenses;
-            scope.lenses = Enumerable.From(lenses).OrderByDescending("$.number").ToArray();
+            scope.lenses = lenses;
         };
 
         scope.visualizeLense = function (lense) {
