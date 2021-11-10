@@ -32,6 +32,30 @@
         var experience = addSet("Experiência");
         var process = addSet("Processo");
         var game = addSet("Jogo");
+        
+        addLense({
+            number: 1,
+            title: "A Lente da Emoção",
+            smallTitle: "Emoção",
+            page: { br: null },
+            sets: [ experience ],
+            illustrator: "Rachel Dorrett",
+            description: '\
+                <div class="citation">\
+                    <i>\
+                        As pessoas podem esquecer o que você disse,<br/>\
+                        mas elas nunca vão esquecer como você as fez se sentir.\
+                        <small>Maya Angelou</small>\
+                    </i>\
+                </div>\
+                <p>Para certificar-se de que as emoções que você cria são as corretas, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Quais emoções eu gostaria que meu jogador sentisse?</li>\
+                    <li>Quais emoções os jogadores (incluíndo eu) estão tendo ao jogar agora? Por quê?</li>\
+                    <li>Como posso preencher a lacuna entre as emoções que os jogadores estão tendo e as que eu gostaria que eles tivessem?</li>\
+                </ul>\
+            '
+        });
 
         addLense({
             number: 2,
@@ -49,6 +73,26 @@
                 </ul>\
                 Se houver uma grande diferença entre a experiência que você deseja criar e aquela que na verdade está criando, o jogo precisa mudar: você precisa definir com\
                 clareza a experiência essencial que deseja, e descobrir o maior número possível de maneiras de introduzir essa essência no seu jogo.\
+            '
+        });
+        
+        addLense({
+            number: 3,
+            title: "A Lente da Localização",
+            smallTitle: "Localização",
+            page: { br: null },
+            sets: [ experience ],
+            illustrator: "Zachary D. Coe",
+            description: '\
+                <p>\
+                    Os locais que jogamos exercem tremenda influência no design de nossos jogos. Para certificar-se que você não faça o design no vácuo, faça a si mesmo estas\
+                    perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Que tipo de local melhor se adapta ao jogo que estou tentando criar?</li>\
+                    <li>O meu local possui propriedades especiais que irão influenciar meu jogo?</li>\
+                    <li>Que elementos do meu jogo estão em harmonia com o meu local? Que elementos não estão?</li>\
+                </ul>\
             '
         });
 
@@ -246,8 +290,9 @@
             sets: [ process ],
             illustrator: "Sam Yip",
             description: '\
-                <i>Quando você sabe ouvir, todo mundo é guru</i>\
-                <p class="text-right">Ram Dass</p>\
+                <div class="citation">\
+                    <i>Quando você sabe ouvir, todo mundo é guru. <small>Ram Dass</small></i>\
+                </div>\
                 <p>Para usar essa lente, pare de olhar para seu jogo, e pare de olhar para jogos como o seu. Em vez disso, <i>olhe para todos os lugares</i>.</p>\
                 <p>Faça a si mesmo estas perguntas:</p>\
                 <ul class="questions">\
@@ -362,6 +407,26 @@
         });
         
         addLense({
+            number: 18,
+            title: "A Lente da Paixão",
+            smallTitle: "Paixão",
+            page: { br: null },
+            sets: [ designer ],
+            illustrator: "Rachel Dorrett",
+            description: '\
+                <p>\
+                    Ao final de cada protótipo, quando você cuidadosamente mitigar os riscos e planejar o que fazer a seguir, não se esqueça de checar como você se sente\
+                    com relação ao seu jogo, com estas perguntas importantes:\
+                </p>\
+                <ul class="questions">\
+                    <li>Estou cheio de uma paixão cega sobre o quão bom esse jogo será?</li>\
+                    <li>Se eu perdi a paixão, como posso encontrá-la de novo?</li>\
+                    <li>Se a paixão não está voltando, eu não deveria estar fazendo alguma outra coisa?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
             number: 19,
             title: "A Lente do Jogador",
             smallTitle: "O Jogador",
@@ -455,6 +520,46 @@
         });
         
         addLense({
+            number: 23,
+            title: "A Lente da Motivação",
+            smallTitle: "Motivação",
+            page: { br: null },
+            sets: [ player ],
+            illustrator: "Dan Lin",
+            description: '\
+                <p>Cada jogo possui um ecosistema complexo de motivações. Para examinar elas mais de perto, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Quais motivações os jogadores tem para jogar o meu jogo?</li>\
+                    <li>Quais motivações são mais internas? Quais são mais externas?</li>\
+                    <li>Quais são para busca de prazer? Quais são para evitar alguma dor?</li>\
+                    <li>Quais motivações suportam cada uma?</li>\
+                    <li>Quais motivações estão em conflito?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 24,
+            title: "A Lente da Novidade",
+            smallTitle: "Novidade",
+            page: { br: null },
+            sets: [ player ],
+            illustrator: "Zachary D. Coe",
+            description: '\
+                <div class="citation">\
+                    <i>Diferente nem sempre é melhor, mas melhor sempre é diferente. <small>Ram Dass</small></i>\
+                </div>\
+                <p>Para garantir que você aproveite a poderosa motivação da novidade, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>O que há de novo no meu jogo?</li>\
+                    <li>Meu jogo possui novidades ao longo do jogo ou apenas no começo?</li>\
+                    <li>Eu posso a mistura certa do que é novo e do que familiar?</li>\
+                    <li>Quando as novidades diminuem, os jogadores ainda irão gostar do meu jogo?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
             number: 25,
             title: "A Lente da Avaliação",
             smallTitle: "Avaliação",
@@ -539,6 +644,24 @@
                 para a mecânica do seu jogo. Pequenas mudanças em relação a quem conhece quais informações podem mudar radicalmente um jogo, às vezes para melhor, as vezes\
                 para pior. Quem conhece os atributos que podem modificar o decorrer de um jogo? Uma ótima forma de dramatizar seu jogo é transformar informações privadas\
                 importantes em fatos partilhados pelo público.\
+            '
+        });
+        
+        addLense({
+            number: 29,
+            title: "A Lente dos Segredos",
+            smallTitle: "Segredos",
+            page: { br: null },
+            sets: [ experience, game ],
+            illustrator: "Lilian Qian",
+            description: '\
+                <p>Mude quem possui uma informação, e você mudará seu jogo completamente. Para usar essa lente, pense sobre quem conhece o quê e por quê.</p>\
+                <ul class="questions">\
+                    <li>Que informações só o jogo possui?</li>\
+                    <li>Que informações todos os jogadores possuem?</li>\
+                    <li>Que informações alguns ou apenas um jogador possui?</li>\
+                    <li>Mudar quem possui qual informação, melhoraria meu jogo de alguma forma?</li>\
+                </ul>\
             '
         });
         
@@ -1376,6 +1499,25 @@
         });
         
         addLense({
+            number: 65,
+            title: "A Lente da Ação Primitiva",
+            smallTitle: "Ação Primitiva",
+            page: { br: null },
+            sets: [ game, player ],
+            illustrator: "Astro Leon-Jhong",
+            description: '\
+                <p>\
+                    Algumas ações e interfaces são tão intuitivas que até animais milhões de anos atrás já as faziam ou usavam. Para capturar o poder da ação primitiva,\
+                    faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais partes do meu jogo são tão primitivas que até um animal poderia jogar? Por quê?</li>\
+                    <li>Quais partes do meu jogo poderiam ser mais primitivas?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
             number: 66,
             title: "A Lente dos Canais e das Dimensões",
             smallTitle: "Canais e Dimensões",
@@ -1415,6 +1557,25 @@
                     <li>Os modos podem ser separados ou combinados?</li>\
                     <li>Há sobreposição de modos? Se houver, posso colocá-los em diferentes canais de entrada?</li>\
                     <li>Quando os modos do jogo mudam, como o jogador sabe isso? O jogo pode comunicar a mudança no modo de mais de uma forma?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 68,
+            title: "A Lente dos Momentos",
+            smallTitle: "Momentos",
+            page: { br: null },
+            sets: [ experience ],
+            illustrator: "Kim Kiser",
+            description: '\
+                <p>\
+                    Momentos memoráveis são como as estrelas que compõem a constelação da sua curva de interesse. Para traçar quais são mais importantes, faça a si\
+                    mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Quais são os momentos chaves no meu jogo?</li>\
+                    <li>Como posso tornar cada momento o mais poderoso possível?</li>\
                 </ul>\
             '
         });
@@ -1664,6 +1825,24 @@
         });
         
         addLense({
+            number: 80,
+            title: "A Lente da Ajuda",
+            smallTitle: "Ajuda",
+            page: { br: null },
+            sets: [ experience ],
+            illustrator: "Astro Leon-Jhong",
+            description: '\
+                <p>No fundo, todo mundo gosta de ser útil. Para canalizar esse espírito de ajuda para uma jogabilidade envolvente, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Dentro do contexto do jogo, quem o jogador está ajudando?</li>\
+                    <li>Posso fazer o jogador se sentir mais conectado com as personagens que o jogador está ajudando?</li>\
+                    <li>Eu posso contar de forma melhor a história, de como atingir os objetivos do jogo ajudam algúem?</li>\
+                    <li>Como as personagens que foram ajudadas mostram sua gratidão?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
             number: 81,
             title: "A Lente do Controle",
             smallTitle: "Controle",
@@ -1704,6 +1883,23 @@
                 <ul class="questions">\
                     <li>O que quero que o jogador experimente?</li>\
                     <li>Como as personagens podem ajudar a satisfazer essa experiência, sem comprometer seus objetivos no mundo do jogo?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 83,
+            title: "A Lente da Fantasia",
+            smallTitle: "Fantasia",
+            page: { br: null },
+            sets: [ experience, player ],
+            illustrator: "Ryan Yee",
+            description: '\
+                <p>Todo mundo possui desejos e ambições secretas. Para certificar-se de que seu mundo realiza eles, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Quais fantasias meu mundo realiza?</li>\
+                    <li>Quem o jogador fantasia em ser?</li>\
+                    <li>O quê o jogador fantasia em fazer nesse mundo?</li>\
                 </ul>\
             '
         });
@@ -1908,6 +2104,44 @@
         });
         
         addLense({
+            number: 94,
+            title: "A Lente da Atmosfera",
+            smallTitle: "Atmosfera",
+            page: { br: null },
+            sets: [ experience ],
+            illustrator: "Ryan Yee",
+            description: '\
+                <p>\
+                    A atmosfera é invisível e intangível. Mas de alguma forma ela nos envolve, nos permeia e faz a gente parte do mundo. Para certificar-se de que a\
+                    atmosfera do seu mundo é devidamente intoxicante, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Sem usar palavras, como posso descrever a atmosfera do meu jogo?</li>\
+                    <li>Como posso usar controle artístico (ambos visual e sonoro) para aprofundar esta atmosfera?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 95,
+            title: "A Lente do Espectador",
+            smallTitle: "Espectador",
+            page: { br: null },
+            sets: [ game ],
+            illustrator: "Josh Hendryx",
+            description: '\
+                <p>\
+                    Por milhares de anos, o homem amou se sentar e assistir os outros jogarem - mas só se os jogos valessem a pena de serem assistidos. Para garantir que\
+                    seu jogo seja digno do espectador, faça a si mesmo estas perguntas:\
+                </p>\
+                <ul class="questions">\
+                    <li>Meu jogo é interessante de ser assistido? Por quê ou por quê não?</li>\
+                    <li>Como posso torná-lo mais interessante de ser assistido?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
             number: 96,
             title: "A Lente da Amizade",
             smallTitle: "Amizade",
@@ -2091,6 +2325,24 @@
                     <li>Como ____ será daqui a dois anos? Por quê?</li>\
                     <li>Como ____ será daqui a quatro anos? Por quê?</li>\
                     <li>Como ____ será daqui a dez anos? Por quê?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 106,
+            title: "A Lente da Utopia",
+            smallTitle: "Utopia",
+            page: { br: null },
+            sets: [ experience, designer ],
+            illustrator: "Ryan Yee",
+            description: '\
+                <p>Para certificar-se de que você está à frente para um mundo melhor, faça a si mesmo estas perguntas:</p>\
+                <ul class="questions">\
+                    <li>Estou criando algo que parece mágico?</li>\
+                    <li>As pessoas estão excitadas apenas por ouvir o que estou criando? Por quê ou por quê não?</li>\
+                    <li>Meu jogo melhora o estado da arte de uma forma significativa?</li>\
+                    <li>O meu jogo faz o mundo ser um lugar melhor?</li>\
                 </ul>\
             '
         });

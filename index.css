@@ -161,6 +161,22 @@
                 margin-left: -19px;
             }
 
+    .lense-description .citation {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+        .lense-description .citation i {
+            position: relative;
+        }
+
+        .lense-description .citation small {
+            font-style: normal;
+            position: absolute;
+            right: -24px;
+            bottom: -18px;
+        }
+
 .lense-ref {
     color: #242493;
 }
