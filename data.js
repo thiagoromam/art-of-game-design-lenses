@@ -1709,7 +1709,7 @@
         addLense({
             number: 84,
             title: "A Lente do Mundo",
-            smallTitle: "O Mundo",
+            smallTitle: "Mundo",
             page: { br: 307 },
             set: game,
             illustrator: "Nick Daniel",
@@ -1722,6 +1722,25 @@
                     <li>Meu mundo é melhor do que o mundo real?</li>\
                     <li>Pode haver várias portas de entrada para meu mundo? Em que elas diferem? Como suportam umas às outras?</li>\
                     <li>Meu mundo está centrado em uma única história, ou muitas histórias poderiam acontecer aqui?</li>\
+                </ul>\
+            '
+        });
+        
+        addLense({
+            number: 85,
+            title: "A Lente do Avatar",
+            smallTitle: "Avatar",
+            page: { br: 314 },
+            set: player,
+            illustrator: "Cheryl Ceol",
+            description: '\
+                <p>\
+                    O avatar é a porta de entrada de um jogador para o mundo do jogo. Para assegurar que o avatar desperte o melhor possível a identidade do jogador,\
+                    pergunte-se:\
+                </p>\
+                <ul class="questions">\
+                    <li>Meu avatar é uma forma ideal que talvez seja atraente para os jogadores?</li>\
+                    <li>Meu avatar tem qualidades icônicas que permitem que um jogador se projete na personagem?</li>\
                 </ul>\
             '
         });
