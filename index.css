@@ -139,6 +139,12 @@
     margin-bottom: 6%;
 }
 
+.lense-favorite-button {
+    position: absolute;
+    right: 3px;
+    top: 11px;
+}
+
 .lense-description {
     font-size: 0.9em;
 }
