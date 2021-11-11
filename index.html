@@ -9,49 +9,53 @@
     </head>
     <body ng-controller="MainController" ng-init="init()">
         <!-- HEADER -->
-        <h5 class="mt-4 mb-4 text-center">Arte de Game Design</h5>
-
-        <div class="text-center mb-2">
-            <ul class="main-menu">
-                <li ng-repeat="menu in menus" class="circle-button" ng-class="{ active: isMenuActive(menu) }" ng-click="selectMenu(menu)" title="{{menu.title}}">
-                    <img ng-src="images/icons/{{menu.name}}.png" />
-                </li>
-            </ul>
+        <div class="header">
+            <h6 class="mt-3 mb-3 text-center">Arte de Game Design</h6>
+    
+            <div class="text-center mb-2">
+                <ul class="main-menu">
+                    <li ng-repeat="menu in menus" class="circle-button" ng-class="{ active: isMenuActive(menu) }" ng-click="selectMenu(menu)" title="{{menu.title}}">
+                        <img ng-src="images/icons/{{menu.name}}.png" />
+                    </li>
+                </ul>
+            </div>
+         
+            <div class="text-center">
+                <ul class="sets-menu">
+                    <li ng-repeat="set in sets" ng-class="{ active: set.active }" ng-click="selectSet(set)" ng-bind="set.title"></li>
+                </ul>
+            </div>
         </div>
-     
-        <div class="text-center">
-            <ul class="sets-menu">
-                <li ng-repeat="set in sets" ng-class="{ active: set.active }" ng-click="selectSet(set)" ng-bind="set.title"></li>
-            </ul>
-        </div>
 
-        <!-- CARDS -->
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in lenses">
-                    <div class="card lense m-3" ng-click="visualizeLense(lense)">
-                        <div class="card-body">
-                            <div class="card-title text-center">
-                                <span class="lense-number" ng-bind="lense.number"></span>
-                                <span class="lense-title" ng-bind="lense.smallTitle"></span>
-                            </div>
-
-                            <div class="lense-image mt-4 mb-3">
-                                <img class="lense-image" ng-src="images/lenses/{{lense.number}}.png" />
-                                <div class="text-right">
-                                    <span class="lense-image-illustrator">
-                                        Ilustrado por: {{lense.illustrator}}
-                                    </span>
+        <div class="content">
+            <!-- CARDS -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in lenses">
+                        <div class="card lense m-3" ng-click="visualizeLense(lense)">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <span class="lense-number" ng-bind="lense.number"></span>
+                                    <span class="lense-title" ng-bind="lense.smallTitle"></span>
+                                </div>
+    
+                                <div class="lense-image mt-4 mb-3">
+                                    <img class="lense-image" ng-src="images/lenses/{{lense.number}}.png" />
+                                    <div class="text-right">
+                                        <span class="lense-image-illustrator">
+                                            Ilustrado por: {{lense.illustrator}}
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-1" ng-show="isMenuActive('random') || isMenuActive('divination')">
-                    <a class="circle-button small contrast m-3" ng-click="updateLensesList()">
-                        <img src="images/icons/update.png" />
-                    </a>
+    
+                    <div class="col-1" ng-show="isMenuActive('random') || isMenuActive('divination')">
+                        <a class="circle-button small contrast m-3" ng-click="updateLensesList()">
+                            <img src="images/icons/update.png" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
