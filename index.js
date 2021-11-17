@@ -8,8 +8,10 @@
                 return m.name == storage.selectedMenu;
             });
 
-            if (menu)
+            if (menu) {
                 scope.selectedMenu = menu;
+                scope.updateView = menu.update;
+            }
         }
         function loadActiveSetsFromStorage() {
             var sets = data.sets.where(function (s) {
@@ -29,12 +31,53 @@
                 l.favorite = true;
             });
         }
+        function getLenses(randomCount) {
+            var lenses = data.lenses.clone();
+            var activeSets = data.sets.where("$.active");
+
+            if (activeSets.length) {
+                var ids = activeSets.selectMany("$.lenses");
+
+                lenses = lenses.where(function (l) {
+                    return ids.contains(l.id);
+                });
+            }
+
+            if (randomCount > 0)
+            {
+                var previousLenses = lenses;
+                lenses = [];
+
+                while (randomCount > 0 && previousLenses.length) {
+                    var index = Number.getRandomInt(0, previousLenses.length - 1);
+                    var lense = previousLenses[index];
+
+                    lenses.push(lense);
+                    previousLenses.remove(lense);
+                    randomCount--;
+                }
+            }
+
+            return lenses;
+        }
+        function updateLensesList() {
+            scope.lenses = getLenses();
+        }
+        function updateRandomLense() {
+            scope.randomLense = getLenses(1)[0];
+        }
+        function updateDivinationList() {
+            scope.divination = getLenses(4);
+        }
+        function updateFavoriteList() {
+            scope.favorites = getLenses().where("$.favorite");
+        }
 
         scope.menus = [
-            { name: "lenses", title: "Lentes" },
-            { name: "random", title: "Aleatória" },
-            { name: "divination", title: "Adivinhação" },
-            { name: "favorites", title: "Favoritas" }
+            { name: "lenses", title: "Lentes", update: updateLensesList },
+            { name: "random", title: "Aleatória", update: updateRandomLense },
+            { name: "divination", title: "Adivinhação", update: updateDivinationList },
+            { name: "favorites", title: "Favoritas", update: updateFavoriteList }
         ];
         
         scope.selectedMenu = scope.menus[0];
@@ -47,19 +90,17 @@
             loadSelectedMenuFromStorage();
             loadActiveSetsFromStorage();
             loadFavoritesFromStorage();
-            
-            scope.updateLensesList();
+
+            scope.updateView();
         };
         scope.selectMenu = function (menu) {
-            if (menu.name == scope.selectedMenu.name)
-                return;
-
             scope.selectedMenu = menu;
+            scope.updateView = menu.update;
             
             storage.selectedMenu = menu.name;
             storage.save();
 
-            scope.updateLensesList();
+            scope.updateView();
         };
         scope.isMenuActive = function (menu) {
             if (typeof(menu) == "string")
@@ -76,43 +117,7 @@
             storage.activeSets.pushRange(activeSetsIds);
             storage.save();            
 
-            scope.updateLensesList();
-        };
-
-        scope.updateLensesList = function () {
-            var lenses = data.lenses.clone();
-            var activeSets = data.sets.where("$.active");
-
-            if (activeSets.length) {
-                var ids = activeSets.selectMany("$.lenses");
-
-                lenses = lenses.where(function (l) {
-                    return ids.contains(l.id);
-                });
-            }
-
-            if (scope.isMenuActive("favorites")) {
-                lenses = lenses.where("$.favorite");
-            }
-
-            if (scope.isMenuActive("random") || scope.isMenuActive("divination"))
-            {
-                var previousLenses = lenses;
-                var count = scope.isMenuActive("divination") ? 4 : 1;
-
-                lenses = [];
-
-                while (count > 0 && previousLenses.length) {
-                    var index = Number.getRandomInt(0, previousLenses.length - 1);
-                    var lense = previousLenses[index];
-
-                    lenses.push(lense);
-                    previousLenses.remove(lense);
-                    count--;
-                }
-            }
-            
-            scope.lenses = lenses;
+            scope.updateView();
         };
 
         scope.visualizeLense = function (lense) {
@@ -139,8 +144,29 @@
         scope.$parent.lenseModal = this;
     }]);
 
+    app.directive("lenseCard", function () {
+        return {
+            restrict: "E",
+            templateUrl: "lense-card.html",
+            scope: {
+                lense: "=info"
+            }
+        }
+    });
+
+    app.directive("lenseFullData", function () {
+        return {
+            restrict: "E",
+            templateUrl: "lense-full-data.html",
+            scope: {
+                lense: "=info"
+            }
+        }
+    });
+
     app.directive("lenseRef", ["data", function (data) {
         return {
+            restrict: "E",
             template: function (element) {
                 var number = parseInt(element.html().trim());
                 var lense = data.lenses.single("$.number == " + number);
@@ -152,6 +178,7 @@
 
     app.directive("lenseTitle", ["data", function (data) {
         return {
+            restrict: "E",
             template: function (element) {
                 var number = parseInt(element.html().trim());
                 var lense = data.lenses.single("$.number == " + number);

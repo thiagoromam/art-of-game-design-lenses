@@ -29,32 +29,39 @@
 
         <div class="content">
             <!-- CARDS -->
-            <div class="container">
+            <div class="container" ng-if="isMenuActive('lenses')">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in lenses">
-                        <div class="card lense m-3" ng-click="visualizeLense(lense)">
-                            <div class="card-body">
-                                <div class="card-title text-center">
-                                    <span class="lense-number" ng-bind="lense.number"></span>
-                                    <span class="lense-title" ng-bind="lense.smallTitle"></span>
-                                </div>
-    
-                                <div class="lense-image mt-4 mb-3">
-                                    <img class="lense-image" ng-src="images/lenses/{{lense.number}}.png" />
-                                    <div class="text-right">
-                                        <span class="lense-image-illustrator">
-                                            Ilustrado por: {{lense.illustrator}}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <lense-card class="d-block mb-4" info="lense"></lense-card>
                     </div>
-    
-                    <div class="col-1" ng-show="isMenuActive('random') || isMenuActive('divination')">
-                        <a class="circle-button small contrast m-3" ng-click="updateLensesList()">
-                            <img src="images/icons/update.png" />
-                        </a>
+                </div>
+            </div>
+
+            <!-- RANDOM -->
+            <div class="container" ng-if="isMenuActive('random')">
+                <div class="random-lense card">
+                    <div class="card-body">
+                        <lense-full-data info="randomLense"></lense-full-data>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RANDOM -->
+            <div class="container" ng-if="isMenuActive('divination')">
+                <div class="row">
+                    <div class="col-12 col-md-2" ng-repeat-start="lense in divination" ng-show="$index % 2 == 0"></div>
+                    <div class="col-12 col-md-4">
+                        <lense-card class="d-block mb-5" info="lense"></lense-card>
+                    </div>
+                    <div class="col-12 col-md-2" ng-repeat-end  ng-show="$index % 2 == 1"></div>
+                </div>
+            </div>
+
+            <!-- FAVORITES -->
+            <div class="container" ng-if="isMenuActive('favorites')">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in favorites">
+                        <lense-card class="d-block mb-4" info="lense"></lense-card>
                     </div>
                 </div>
             </div>
@@ -62,29 +69,7 @@
 
         <modal class="lense-modal" is-open="isOpened" ng-controller="LenseModalController">
             <modal-body>
-                <a class="lense-favorite-button circle-button small" ng-class="{ active: lense.favorite }" ng-click="toggleFavorite(lense)">
-                    <img src="images/icons/favorites.png" title="Favoritar" />
-                </a>
-
-                <div class="text-center">
-                    <span class="lense-number" ng-bind="lense.number"></span>
-                    <span class="lense-title" ng-bind="lense.title"></span>
-                </div>
-
-                <div class="lense-image mt-4 mb-3">
-                    <img class="lense-image" ng-src="images/lenses/{{lense.number}}.png" />
-                    <div class="text-right">
-                        <span class="lense-image-illustrator">
-                            Ilustrado por: {{lense.illustrator}}
-                        </span>
-                    </div>
-                </div>
-
-                <hr class="hr" />
-                <div class="lense-description" bind-html-compile="lense.description"></div>
-                <div class="lense-page text-right mt-4">
-                    <div ng-show="lense.page.br">Arte de Game Design: o livro original <span class="ml-2">p {{lense.page.br}}</span></div>
-                </div>
+                <lense-full-data info="lense"></lense-full-data>
             </modal-body>
         </modal>
     </body>
@@ -103,4 +88,53 @@
     <script src="app.js"></script>
     <script src="data.js"></script>
     <script src="index.js"></script>
+
+    <!-- TEMPLATES -->
+    <script type="text/ng-template" id="lense-card.html"> 
+        <div class="card lense" ng-click="$parent.visualizeLense(lense)">
+            <div class="card-body">
+                <div class="card-title text-center">
+                    <span class="lense-number" ng-bind="lense.number"></span>
+                    <span class="lense-title" ng-bind="lense.smallTitle"></span>
+                </div>
+
+                <div class="lense-image mt-4 mb-3">
+                    <img class="lense-image" ng-src="images/lenses/{{lense.number}}.png" />
+                    <div class="text-right">
+                        <span class="lense-image-illustrator">
+                            Ilustrado por: {{lense.illustrator}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="lense-full-data.html">
+        <div class="lense-full-data">
+            <a class="lense-favorite-button circle-button small" ng-class="{ active: lense.favorite }" ng-click="$parent.toggleFavorite(lense)">
+                <img src="images/icons/favorites.png" title="Favoritar" />
+            </a>
+
+            <div class="text-center">
+                <span class="lense-number" ng-bind="lense.number"></span>
+                <span class="lense-title" ng-bind="lense.title"></span>
+            </div>
+
+            <div class="lense-image mt-4 mb-3">
+                <img class="lense-image" ng-src="images/lenses/{{lense.number}}.png" />
+                <div class="text-right">
+                    <span class="lense-image-illustrator">
+                        Ilustrado por: {{lense.illustrator}}
+                    </span>
+                </div>
+            </div>
+
+            <hr class="hr" />
+            <div class="lense-description" bind-html-compile="lense.description"></div>
+            <div class="lense-page text-right mt-4">
+                <div ng-show="lense.page.br">Arte de Game Design: o livro original <span class="ml-2">p {{lense.page.br}}</span></div>
+            </div>
+        </div>
+    </script>
 </html>

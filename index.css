@@ -193,3 +193,8 @@
     font-size: 0.75em;
     font-style: italic;
 }
+
+.random-lense {
+    border-color: #f5e1cb;
+    box-shadow: 0px 0px 6px 0px #fbd0a5;
+}
