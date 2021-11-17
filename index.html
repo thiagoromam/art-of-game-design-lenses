@@ -63,15 +63,6 @@
                     <div class="col-12 col-md-2" ng-repeat-end  ng-show="$index % 2 == 1"></div>
                 </div>
             </div>
-
-            <!-- FAVORITES -->
-            <div class="container" ng-if="isMenuActive('favorites')">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in favorites">
-                        <lense-card class="d-block mb-4" info="lense"></lense-card>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <modal class="lense-modal" is-open="isOpened" ng-controller="LenseModalController">
