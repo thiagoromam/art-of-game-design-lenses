@@ -3,6 +3,10 @@
 
     app.controller("MainController", ["$scope", "data", "storage", function (scope, data, storage) {
         
+        function getLenseById(id) {
+            return data.lenses.singleOrDefault("$.id == " + id);
+        }
+
         function loadSelectedMenuFromStorage(){
             var menu = scope.menus.singleOrDefault(function (m) {
                 return m.name == storage.selectedMenu;
@@ -23,11 +27,28 @@
         function loadFavoritesFromStorage() {
             data.sets.favorites.lenses.pushRange(storage.favorites);
         }
+        function loadRandomLenseFromStorage() {
+            var id = storage.randomLense;
+            var lense = data.lenses.singleOrDefault("$.id == " + id);
+
+            if (lense)
+                scope.randomLense = lense;
+        }
+        function loadDivinationListFromStorage() {
+            scope.divination.clear();
+            
+            storage.divination.forEach(function (id) {
+                var lense =  data.lenses.single("$.id == " + id);
+
+                scope.divination.push(lense);
+            });
+        }
+
         function getLenses(randomCount) {
             var lenses = data.lenses.clone();
             var activeSets = data.sets.where("$.active");
 
-            if (activeSets.length) {
+            if (activeSets.any()) {
                 var ids = activeSets.selectMany("$.lenses");
 
                 lenses = lenses.where(function (l) {
@@ -40,7 +61,7 @@
                 var previousLenses = lenses;
                 lenses = [];
 
-                while (randomCount > 0 && previousLenses.length) {
+                while (randomCount > 0 && previousLenses.any()) {
                     var index = Number.getRandomInt(0, previousLenses.length - 1);
                     var lense = previousLenses[index];
 
@@ -52,26 +73,46 @@
 
             return lenses;
         }
+        
         function updateLensesList() {
-            scope.lenses = getLenses();
+            scope.lenses.clear();
+            scope.lenses.pushRange(getLenses());
         }
-        function updateRandomLense() {
+        function updateRandomLense(init) {
+            if (init && scope.randomLense)
+                return;
+
             scope.randomLense = getLenses(1)[0];
         }
-        function updateDivinationList() {
-            scope.divination = getLenses(4);
+        function updateDivinationList(init) {
+            if (init && scope.divination.any())
+                return;
+
+            scope.divination.clear();
+            scope.divination.pushRange(getLenses(4));
+        }
+        
+        function saveRandomLense() {
+            storage.randomLense = scope.randomLense.id;
+            storage.save();
+        }
+        function saveDivinationList() {
+            storage.divination.clear();
+            storage.divination.pushRange(scope.divination.select("$.id"));
+            storage.save();
         }
 
         scope.menus = [
             { name: "lenses", title: "Lentes", updateView: updateLensesList },
-            { name: "random", title: "Aleatória", updateView: updateRandomLense },
-            { name: "divination", title: "Adivinhação", updateView: updateDivinationList }
+            { name: "random", title: "Aleatória", updateView: updateRandomLense, onSelected: saveRandomLense },
+            { name: "divination", title: "Adivinhação", updateView: updateDivinationList, onSelected: saveDivinationList }
         ];
         
         scope.selectedMenu = scope.menus[0];
         scope.sets = data.sets.where("!$.custom");
         scope.customSets = data.sets.where("$.custom");
-        scope.lenses = data.lenses;
+        scope.lenses = data.lenses.clone();
+        scope.divination = [];
 
         scope.init = function () {
             storage.load();
@@ -79,8 +120,10 @@
             loadSelectedMenuFromStorage();
             loadActiveSetsFromStorage();
             loadFavoritesFromStorage();
+            loadRandomLenseFromStorage();
+            loadDivinationListFromStorage();
 
-            scope.updateView();
+            scope.updateView(true);
         };
         scope.selectMenu = function (menu) {
             scope.selectedMenu = menu;
@@ -89,6 +132,9 @@
             storage.save();
 
             scope.updateView();
+
+            if (menu.onSelected)
+                menu.onSelected();
         };
         scope.isMenuActive = function (menu) {
             if (typeof(menu) == "string")
@@ -113,8 +159,8 @@
 
             scope.updateView();
         };
-        scope.updateView = function () {
-            scope.selectedMenu.updateView();
+        scope.updateView = function (init) {
+            scope.selectedMenu.updateView(init);
         };
 
         scope.visualizeLense = function (lense) {
@@ -198,6 +244,8 @@
         this.selectedMenu = null;
         this.activeSets = [];
         this.favorites = [];
+        this.randomLense = null;
+        this.divination = [];
 
         this.load = function () {
             var json = localStorage.getItem(key);
@@ -205,15 +253,19 @@
 
             if (value) {
                 this.selectedMenu = value.selectedMenu;
-                this.activeSets = value.activeSets;
-                this.favorites = value.favorites;
+                this.activeSets = value.activeSets || [];
+                this.favorites = value.favorites || [];
+                this.randomLense = value.randomLense;
+                this.divination = value.divination || [];
             }
         };
         this.save = function () {
             var value = {
                 selectedMenu: this.selectedMenu,
                 activeSets: this.activeSets,
-                favorites: this.favorites
+                favorites: this.favorites,
+                randomLense: this.randomLense,
+                divination: this.divination
             };
 
             var json = JSON.stringify(value);
