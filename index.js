@@ -184,6 +184,9 @@
         scope.visualizeLense = function (lense) {
             scope.lenseModal.open(lense);
         };
+        scope.isLenseFavorite = function (lense) {
+            return lense && data.sets.favorites.lenses.contains(lense.id);
+        };
         scope.toggleFavorite = function (lense) {
             var favorites = data.sets.favorites.lenses;
             var id = lense.id;
@@ -192,8 +195,6 @@
                 favorites.push(id);
             else
                 favorites.remove(id);
-
-            lense.favorite = !lense.favorite;
 
             storage.favorites.clear();
             storage.favorites.pushRange(favorites);

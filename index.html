@@ -122,7 +122,7 @@
 
     <script type="text/ng-template" id="lense-full-data.html">
         <div class="lense-full-data">
-            <a class="lense-favorite-button circle-button small" ng-class="{ active: lense.favorite }" ng-click="$parent.toggleFavorite(lense)">
+            <a class="lense-favorite-button circle-button small" ng-class="{ active: $parent.isLenseFavorite(lense) }" ng-click="$parent.toggleFavorite(lense)">
                 <img src="images/icons/favorites.png" title="Favoritar" />
             </a>
 
