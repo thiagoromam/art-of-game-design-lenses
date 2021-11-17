@@ -3,10 +3,6 @@
 
     app.controller("MainController", ["$scope", "data", "storage", function (scope, data, storage) {
         
-        function getLenseById(id) {
-            return data.lenses.singleOrDefault("$.id == " + id);
-        }
-
         function loadSelectedMenuFromStorage(){
             var menu = scope.menus.singleOrDefault(function (m) {
                 return m.name == storage.selectedMenu;
@@ -37,9 +33,10 @@
         function loadDivinationListFromStorage() {
             scope.divination.clear();
             
-            storage.divination.forEach(function (id) {
-                var lense =  data.lenses.single("$.id == " + id);
+            storage.divination.forEach(function (l) {
+                var lense =  data.lenses.single("$.id == " + l.id);
 
+                lense.flipped = l.flipped;
                 scope.divination.push(lense);
             });
         }
@@ -88,8 +85,14 @@
             if (init && scope.divination.any())
                 return;
 
+            var lenses = getLenses(4);
+
             scope.divination.clear();
-            scope.divination.pushRange(getLenses(4));
+            scope.divination.pushRange(lenses);
+
+            lenses.forEach(function (l) {
+                l.flipped = false;
+            });
         }
         
         function saveRandomLense() {
@@ -97,8 +100,12 @@
             storage.save();
         }
         function saveDivinationList() {
+            var divination = scope.divination.select(function (l) {
+                return { id: l.id, flipped: l.flipped };
+            });
+
             storage.divination.clear();
-            storage.divination.pushRange(scope.divination.select("$.id"));
+            storage.divination.pushRange(divination);
             storage.save();
         }
 
@@ -191,6 +198,11 @@
             storage.favorites.clear();
             storage.favorites.pushRange(favorites);
             storage.save();
+        };
+        scope.flipLense = function (lense) {
+            lense.flipped = true;
+
+            saveDivinationList();
         };
     }]);
 

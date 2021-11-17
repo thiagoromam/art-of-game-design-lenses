@@ -38,8 +38,10 @@
             <!-- CARDS -->
             <div class="container" ng-if="isMenuActive('lenses')">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in lenses | filter: filterLense">
-                        <lense-card class="d-block mb-4" info="lense"></lense-card>
+                    <div class="col-4" ng-repeat="lense in lenses | filter: filterLense">
+                        <div class="lense-card mb-5">
+                            <lense-card class="d-block mb-4" info="lense"></lense-card>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,14 +55,23 @@
                 </div>
             </div>
 
-            <!-- RANDOM -->
+            <!-- DIVINATION -->
             <div class="container" ng-if="isMenuActive('divination')">
                 <div class="row">
-                    <div class="col-12 col-md-2" ng-repeat-start="lense in divination" ng-show="$index % 2 == 0"></div>
-                    <div class="col-12 col-md-4">
-                        <lense-card class="d-block mb-5" info="lense"></lense-card>
+                    <div class="col-2" ng-repeat-start="lense in divination" ng-show="$index % 2 == 0"></div>
+                    <div class="col-4">
+                        <div class="lense-card mb-5" ng-class="{ flipped: lense.flipped }">
+                            <div class="lense-card-body">
+                                <div class="lense-card-front">
+                                    <lense-card class="d-block" info="lense"></lense-card>
+                                </div>
+                                <div class="lense-card-back" ng-click="flipLense(lense)">
+                                    <img src="images/icons/random.png" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-2" ng-repeat-end  ng-show="$index % 2 == 1"></div>
+                    <div class="col-2" ng-repeat-end  ng-show="$index % 2 == 1"></div>
                 </div>
             </div>
         </div>
