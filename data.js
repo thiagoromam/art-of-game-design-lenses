@@ -2485,4 +2485,21 @@
         //     '
         // });
     });
+
+    app.run(["$compile", "data", function (compile, data) {
+
+        data.lenses.forEach(function (l) {
+            var description = $("<div>" + l.description + "</div>");
+            
+            compile(description);
+
+            var title = l.title;
+            var text = description[0].innerText;
+
+            title = title.uniform();
+            text = text.uniform();
+
+            l.searchText = title + " " + text;
+        });
+    }]);
 })();

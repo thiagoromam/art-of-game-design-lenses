@@ -163,6 +163,17 @@
             scope.selectedMenu.updateView(init);
         };
 
+        scope.filterLense = function (lense) {
+            if (!scope.search)
+                return true;
+
+            var id = parseInt(scope.search);
+
+            if (!isNaN(id))
+                return lense.id == id;
+
+            return lense.searchText.contains(scope.search);
+        };
         scope.visualizeLense = function (lense) {
             scope.lenseModal.open(lense);
         };

@@ -7,7 +7,7 @@
         <link href="lib/bootstrap.min.css" rel="stylesheet" />
         <link href="index.css" rel="stylesheet" />
     </head>
-    <body ng-controller="MainController" ng-init="init()">
+    <body ng-controller="MainController" ng-init="init()" ng-class="{ 'is-search-visible': isMenuActive('lenses') }">
         <!-- HEADER -->
         <div class="header">
             <h6 class="mt-3 mb-3 text-center">Arte de Game Design</h6>
@@ -27,13 +27,18 @@
                     <li ng-repeat="set in customSets" ng-class="{ active: set.active }" ng-click="selectSet(set)" ng-bind="set.title"></li>
                 </ul>
             </div>
+
+            <div class="lenses-search mt-3" ng-show="isMenuActive('lenses')">
+                <input type="text" class="form-control" ng-model="search" placeholder="buscar" uniform />
+                <button ng-click="search = null">x</button>
+            </div>
         </div>
 
         <div class="content">
             <!-- CARDS -->
             <div class="container" ng-if="isMenuActive('lenses')">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in lenses">
+                    <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in lenses | filter: filterLense">
                         <lense-card class="d-block mb-4" info="lense"></lense-card>
                     </div>
                 </div>
@@ -86,6 +91,7 @@
     <script src="lib/gj/app.js"></script>
     <script src="lib/gj/modal.js"></script>
     <script src="lib/gj/bind-html-compile.js"></script>
+    <script src="lib/gj/uniform.js"></script>
     
     <script src="app.js"></script>
     <script src="data.js"></script>
