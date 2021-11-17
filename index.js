@@ -23,13 +23,7 @@
             });
         }
         function loadFavoritesFromStorage() {
-            var lenses = data.lenses.where(function (l) {
-                return storage.favorites.contains(l.id);
-            });
-            
-            lenses.forEach(function (l) {
-                l.favorite = true;
-            });
+            data.sets.favorites.lenses.pushRange(storage.favorites);
         }
         function getLenses(randomCount) {
             var lenses = data.lenses.clone();
@@ -69,19 +63,16 @@
         function updateDivinationList() {
             scope.divination = getLenses(4);
         }
-        function updateFavoriteList() {
-            scope.favorites = getLenses().where("$.favorite");
-        }
 
         scope.menus = [
             { name: "lenses", title: "Lentes", update: updateLensesList },
             { name: "random", title: "Aleatória", update: updateRandomLense },
-            { name: "divination", title: "Adivinhação", update: updateDivinationList },
-            { name: "favorites", title: "Favoritas", update: updateFavoriteList }
+            { name: "divination", title: "Adivinhação", update: updateDivinationList }
         ];
         
         scope.selectedMenu = scope.menus[0];
-        scope.sets = data.sets;
+        scope.sets = data.sets.where("!$.custom");
+        scope.customSets = data.sets.where("$.custom");
         scope.lenses = data.lenses;
 
         scope.init = function () {
@@ -111,6 +102,12 @@
         scope.selectSet = function (set) {
             set.active = !set.active;
 
+            // only favorites active or the same type of sets
+            data.sets.forEach(function (s) {
+                if (s.custom != set.custom || set == data.sets.favorites && s != set)
+                    s.active = false;
+            });
+
             var activeSetsIds = data.sets.where("$.active").select("$.id");
 
             storage.activeSets.clear();
@@ -124,14 +121,20 @@
             scope.lenseModal.open(lense);
         };
         scope.toggleFavorite = function (lense) {
+            var favorites = data.sets.favorites.lenses;
+            var id = lense.id;
+
+            if (!favorites.contains(id))
+                favorites.push(id);
+            else
+                favorites.remove(id);
+
             lense.favorite = !lense.favorite;
 
-            var favoritesIds = data.lenses.where("$.favorite").select("$.id");
-
             storage.favorites.clear();
-            storage.favorites.pushRange(favoritesIds);
+            storage.favorites.pushRange(favorites);
             storage.save();
-        }
+        };
     }]);
 
     app.controller("LenseModalController", ["$scope", function (scope) {

@@ -23,6 +23,8 @@
             <div class="text-center">
                 <ul class="sets-menu">
                     <li ng-repeat="set in sets" ng-class="{ active: set.active }" ng-click="selectSet(set)" ng-bind="set.title"></li>
+                    <li class="sets-divider">|</li>
+                    <li ng-repeat="set in customSets" ng-class="{ active: set.active }" ng-click="selectSet(set)" ng-bind="set.title"></li>
                 </ul>
             </div>
         </div>

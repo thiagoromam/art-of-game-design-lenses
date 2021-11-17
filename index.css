@@ -88,6 +88,11 @@
         font-weight: bold;
     }
 
+.sets-divider {
+    margin-right: 13px !important;
+    margin-left: 13px !important;
+}
+
 /* CONTENT */
 .content {
     margin-top: 174px;

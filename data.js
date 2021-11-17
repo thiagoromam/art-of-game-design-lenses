@@ -5,10 +5,11 @@
         var sets = this.sets = [];
         var lenses = this.lenses = [];
 
-        function addSet(title) {
+        function addSet(set) {
             var lastId = sets.length ? sets.max("$.id") : 0;
-            var set = { id: lastId + 1, title, lenses: [] };
 
+            set.id = lastId + 1;
+            set.lenses = [];
             sets.push(set);
 
             return set;
@@ -27,12 +28,15 @@
             return lense;
         }
 
-        var designer = addSet("Designer");
-        var player = addSet("Jogador");
-        var experience = addSet("Experiência");
-        var process = addSet("Processo");
-        var game = addSet("Jogo");
+        var designer = addSet({ title: "Designer" });
+        var player = addSet({ title: "Jogador" });
+        var experience = addSet({ title: "Experiência" });
+        var process = addSet({ title: "Processo" });
+        var game = addSet({ title: "Jogo" });
+        var favorites = addSet({ title: "Favoritas", custom: true });
         
+        sets.favorites = favorites;
+
         addLense({
             number: 1,
             title: "A Lente da Emoção",
