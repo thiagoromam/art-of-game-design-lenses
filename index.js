@@ -8,10 +8,8 @@
                 return m.name == storage.selectedMenu;
             });
 
-            if (menu) {
+            if (menu)
                 scope.selectedMenu = menu;
-                scope.updateView = menu.update;
-            }
         }
         function loadActiveSetsFromStorage() {
             var sets = data.sets.where(function (s) {
@@ -65,9 +63,9 @@
         }
 
         scope.menus = [
-            { name: "lenses", title: "Lentes", update: updateLensesList },
-            { name: "random", title: "Aleatória", update: updateRandomLense },
-            { name: "divination", title: "Adivinhação", update: updateDivinationList }
+            { name: "lenses", title: "Lentes", updateView: updateLensesList },
+            { name: "random", title: "Aleatória", updateView: updateRandomLense },
+            { name: "divination", title: "Adivinhação", updateView: updateDivinationList }
         ];
         
         scope.selectedMenu = scope.menus[0];
@@ -86,7 +84,6 @@
         };
         scope.selectMenu = function (menu) {
             scope.selectedMenu = menu;
-            scope.updateView = menu.update;
             
             storage.selectedMenu = menu.name;
             storage.save();
@@ -115,6 +112,9 @@
             storage.save();            
 
             scope.updateView();
+        };
+        scope.updateView = function () {
+            scope.selectedMenu.updateView();
         };
 
         scope.visualizeLense = function (lense) {
