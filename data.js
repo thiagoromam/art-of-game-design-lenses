@@ -400,7 +400,7 @@
                 <p>Faça a si mesmo estas perguntas:</p>\
                 <ul class="questions">\
                     <li>Se meu jogo não tiver um objetivo, será divertido? Se não for, como posso mudar isso?</li>\
-                    <li>Quando as pessoas veem meu jogo, elas querem começar a interagir com ele, mesmo antes que saivam o que fazer? Se não, como posso mudar isso?</li>\
+                    <li>Quando as pessoas veem meu jogo, elas querem começar a interagir com ele, mesmo antes que saibam o que fazer? Se não, como posso mudar isso?</li>\
                 </ul>\
                 Há duas maneiras de usar a Lente do Brinquedo. Uma delas é utilizá-la em um jogo existente, descobrir como adicionar mais qualidades de brinquedo a ele -\
                 isto é, como torná-lo mais acessivel e divertido de manipular.<br/>\
