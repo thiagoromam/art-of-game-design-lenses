@@ -9,3 +9,6 @@ A aplicação pode ser executada diretamente no navegador sem a necessidade de u
 
 Não possuo nenhum vínculo com o autor ou com a editora que lançou o livro no Brasil.
 O código está aberto para uso de outros desenvolvedores, entusiastas e profissionais da área de Game Design.
+
+# Github Pages
+https://thiagoromam.github.io/art-of-game-design-lenses
