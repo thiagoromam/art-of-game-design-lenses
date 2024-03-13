@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Arte de Game Design</title>
         <link rel="icon" href="site.ico">
+        <link rel="manifest" href="pwa/manifest.json">
         
         <link href="lib/bootstrap.min.css" rel="stylesheet" />
         <link href="index.css" rel="stylesheet" />
@@ -11,7 +12,10 @@
     <body ng-controller="MainController" ng-init="init()" ng-class="{ 'is-search-visible': isMenuActive('lenses') }">
         <!-- HEADER -->
         <div class="header">
-            <h6 class="mt-3 mb-3 text-center">Arte de Game Design</h6>
+            <h6 class="mt-3 mb-3 text-center">
+                Arte de Game Design
+                <a class="badge badge-info py-1 px-2 ml-2 clickable install-pwa d-none">app</a>
+            </h6>
     
             <div class="text-center mb-2">
                 <ul class="main-menu">
@@ -99,6 +103,7 @@
     <script src="app.js"></script>
     <script src="data.js"></script>
     <script src="index.js"></script>
+    <script src="pwa/bind.js"></script>
 
     <!-- TEMPLATES -->
     <script type="text/ng-template" id="lense-card.html"> 
