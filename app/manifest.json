@@ -7,7 +7,7 @@
   "display": "minimal-ui",
   "theme_color": "#ffb370",
   "background_color": "#fbfaf9",
-  "scope": "/app/",
+  "scope": "https://thiagoromam.github.io/art-of-game-design-lenses",
   "icons": [
     {
       "src": "icon-192x192.png",
