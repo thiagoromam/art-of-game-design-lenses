@@ -110,6 +110,7 @@ body.is-search-visible .header {
     max-width: 500px;
     margin: 0 auto;
     position: relative;
+    padding: 0 15px;
 }
 
     .lenses-search .form-control {
@@ -253,7 +254,6 @@ body.is-search-visible .content {
 
 .lense-card {
     background-color: transparent;
-    width: 300px;
     height: 350px;
     perspective: 1000px;
 }
@@ -302,7 +302,14 @@ body.is-search-visible .content {
 }
 
     .lense-card-back img {
+        position: relative;
         width: 100px;
         height: 100px;
-        margin-top: calc(50% - 30px);
+        top: calc(50% - 50px);
     }
+
+@media (max-width: 375px) {
+    .content {
+        margin-top: 200px;
+    }
+}

@@ -25,10 +25,10 @@
                 </ul>
             </div>
          
-            <div class="text-center">
+            <div class="text-center px-2 py-0">
                 <ul class="sets-menu">
                     <li ng-repeat="set in sets" ng-class="{ active: set.active }" ng-click="selectSet(set)" ng-bind="set.title"></li>
-                    <li class="sets-divider">|</li>
+                    <li class="sets-divider d-none d-sm-block">|</li>
                     <li ng-repeat="set in customSets" ng-class="{ active: set.active }" ng-click="selectSet(set)" ng-bind="set.title"></li>
                 </ul>
             </div>
@@ -43,7 +43,7 @@
             <!-- CARDS -->
             <div class="container" ng-if="isMenuActive('lenses')">
                 <div class="row">
-                    <div class="col-4" ng-repeat="lense in lenses | filter: filterLense">
+                    <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in lenses | filter: filterLense">
                         <div class="lense-card mb-5">
                             <lense-card class="d-block mb-4" info="lense"></lense-card>
                         </div>
@@ -63,8 +63,8 @@
             <!-- DIVINATION -->
             <div class="container" ng-if="isMenuActive('divination')">
                 <div class="row">
-                    <div class="col-2" ng-repeat-start="lense in divination" ng-show="$index % 2 == 0"></div>
-                    <div class="col-4">
+                    <div class="col-12 col-lg-2" ng-repeat-start="lense in divination" ng-show="$index % 2 == 0"></div>
+                    <div class="col-12 col-md-6 col-lg-4">
                         <div class="lense-card mb-5" ng-class="{ flipped: lense.flipped }">
                             <div class="lense-card-body">
                                 <div class="lense-card-front">
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2" ng-repeat-end  ng-show="$index % 2 == 1"></div>
+                    <div class="col-12 col-lg-2" ng-repeat-end ng-show="$index % 2 == 1"></div>
                 </div>
             </div>
         </div>
