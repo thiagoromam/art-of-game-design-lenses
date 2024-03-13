@@ -65,7 +65,7 @@
             number: 2,
             title: "A Lente da Experiência Essencial",
             smallTitle: "Experiência Essencial",
-            page: 21,
+            page: { br: 21 },
             sets: [ experience ],
             illustrator: "Zachary D. Coe",
             description: '\
