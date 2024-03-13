@@ -313,3 +313,26 @@ body.is-search-visible .content {
         margin-top: 200px;
     }
 }
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .lense-col {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .lense-card {
+        height: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .lense-card .card-title {
+        margin-bottom: 0px;
+    }
+
+    .lense-card .lense-image {
+        margin-top: 0.5rem !important;
+    }
+}

@@ -43,7 +43,7 @@
             <!-- CARDS -->
             <div class="container" ng-if="isMenuActive('lenses')">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4" ng-repeat="lense in lenses | filter: filterLense">
+                    <div class="col-12 col-md-6 col-lg-4 lense-col" ng-repeat="lense in lenses | filter: filterLense">
                         <div class="lense-card mb-5">
                             <lense-card class="d-block mb-4" info="lense"></lense-card>
                         </div>
@@ -64,7 +64,7 @@
             <div class="container" ng-if="isMenuActive('divination')">
                 <div class="row">
                     <div class="col-12 col-lg-2" ng-repeat-start="lense in divination" ng-show="$index % 2 == 0"></div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4 lense-col">
                         <div class="lense-card mb-5" ng-class="{ flipped: lense.flipped }">
                             <div class="lense-card-body">
                                 <div class="lense-card-front">
