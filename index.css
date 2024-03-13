@@ -140,6 +140,7 @@ body.is-search-visible .header {
 /* CONTENT */
 .content {
     margin-top: 174px;
+    margin-bottom: 50px;
 }
 
 body.is-search-visible .content {
@@ -188,8 +189,8 @@ body.is-search-visible .content {
 
 .lense-modal {
     max-width: 700px;
-    margin-top: 6%;
-    margin-bottom: 6%;
+    margin-top: 15%;
+    margin-bottom: 15%;
 }
 
 .lense-favorite-button {
