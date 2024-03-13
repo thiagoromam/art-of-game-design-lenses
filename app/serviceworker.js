@@ -1,7 +1,7 @@
 (function () { 	
 	self.addEventListener("install", function (e) {
 	  e.waitUntil(
-		// caches.open("pwa").then(function (cache) {
+		// caches.open("app").then(function (cache) {
 		  // return cache.addAll(["/"]);
 		// })
 	  );

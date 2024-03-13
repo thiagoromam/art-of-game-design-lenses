@@ -1,5 +1,5 @@
 (function () {
-    var installButton = $(".install-pwa");
+    var installButton = $(".install-app");
     var installEvent;
 
     window.addEventListener('beforeinstallprompt', function (e) {
@@ -9,7 +9,7 @@
     window.addEventListener('load', async function () {
         if ('serviceWorker' in navigator) {
             try {
-                await navigator.serviceWorker.register('/pwa/serviceworker.js');
+                await navigator.serviceWorker.register('/app/serviceworker.js');
                 installButton.removeClass("d-none");
             }
             catch (e) {

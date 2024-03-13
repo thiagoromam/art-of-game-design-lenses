@@ -7,7 +7,7 @@
   "display": "minimal-ui",
   "theme_color": "#ffb370",
   "background_color": "#fbfaf9",
-  "scope": "/",
+  "scope": "/app/",
   "icons": [
     {
       "src": "icon-192x192.png",
