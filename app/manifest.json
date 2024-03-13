@@ -3,11 +3,11 @@
   "name": "Arte de Game Design",
   "short_name": "Arte de Game Design",
   "description": "App companion do livro Arte de Game Design. Contém todas as lentes do livro em português, mais as lentes do livro em ingles também.",
-  "start_url": "/",
   "display": "minimal-ui",
   "theme_color": "#ffb370",
   "background_color": "#fbfaf9",
-  "scope": "https://thiagoromam.github.io/art-of-game-design-lenses",
+  "start_url": "/art-of-game-design-lenses/",
+  "scope": "/art-of-game-design-lenses/",
   "icons": [
     {
       "src": "icon-192x192.png",
