@@ -306,7 +306,7 @@
                 <p>\
                     Utilizar essa lente exige mente aberta e imaginação fértil. Você precisa procurar seus sentimentos e observar tudo a seu redor.\
                     Você deve estar disposto a tentar o impossível - pois, certamente, é impossível o fato de que jogar dois dados capte a emoção de uma luta de espadas,\
-                    ou que um videogame faça um logador sentir medo do escuro - não é? Use essa lente para encontrar experiências não relacionadas a jogos que servirão\
+                    ou que um videogame faça um jogador sentir medo do escuro - não é? Use essa lente para encontrar experiências não relacionadas a jogos que servirão\
                     de inspiração para seu jogo.<br/>\
                     Suas escolhas nos diferentes quadrantes da tétrade (técnologia, mecânica, história e estética) podem ser unidads por uma única inspiração,\
                     ou cada uma pode refletir diferentes inspirações, mesclando-as para criar algo inteiramente novo.\
