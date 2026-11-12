@@ -3,6 +3,11 @@
 
     app.controller("MainController", ["$scope", "data", "storage", function (scope, data, storage) {
         
+		function setScopeFields() {
+			scope.sets = data.sets.where("!$.custom");
+			scope.customSets = data.sets.where("$.custom");
+			scope.lenses = data.lenses.clone();
+		}
         function loadSelectedMenuFromStorage(){
             var menu = scope.menus.singleOrDefault(function (m) {
                 return m.name == storage.selectedMenu;
@@ -114,23 +119,26 @@
             { name: "random", title: "Aleatória", updateView: updateRandomLense, onSelected: saveRandomLense },
             { name: "divination", title: "Adivinhação", updateView: updateDivinationList, onSelected: saveDivinationList }
         ];
+		
+		scope.selectedMenu = scope.menus[0];
+		scope.sets = [];
+		scope.customSets = [];
+		scope.lenses = [];
+		scope.divination = [];
         
-        scope.selectedMenu = scope.menus[0];
-        scope.sets = data.sets.where("!$.custom");
-        scope.customSets = data.sets.where("$.custom");
-        scope.lenses = data.lenses.clone();
-        scope.divination = [];
-
         scope.init = function () {
             storage.load();
 
-            loadSelectedMenuFromStorage();
-            loadActiveSetsFromStorage();
-            loadFavoritesFromStorage();
-            loadRandomLenseFromStorage();
-            loadDivinationListFromStorage();
+            data.ready.then(function () {
+				setScopeFields();
+				loadSelectedMenuFromStorage();
+				loadActiveSetsFromStorage();
+				loadFavoritesFromStorage();
+				loadRandomLenseFromStorage();
+				loadDivinationListFromStorage();
 
-            scope.updateView(true);
+				scope.updateView(true);
+			});
         };
         scope.selectMenu = function (menu) {
             scope.selectedMenu = menu;
